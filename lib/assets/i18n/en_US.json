@@ -1,0 +1,39 @@
+{
+  "login_page": {
+    "username": "Username",
+    "password": "Password",
+    "login": "login",
+    "password_contain_sharp": "Password must contain #",
+    "password_length": "The length of the password must be greater than 6",
+    "username_length": "The length of the username must be greater than 8",
+    "password_contain_character": "Password must contain characters",
+    "sign_up": "Sign up",
+    "not_a_member": "not a member?",
+    "forgot_password": "forgot password",
+    "login_successful": "Login was successful",
+    "login_not_successful": "Login was not successful"
+  },
+  "splash_page": {
+    "create_account_admin": "Create account admin"
+  },
+  "sign_up_page": {
+    "mobile": "Phone number",
+    "last_name": "Lastname",
+    "first_name": "Firstname",
+    "repeat_password": "Repeat password",
+    "invalid_mobile": "invalid phone number"
+  },
+  "forgot_password_page": {
+    "continue": "continue",
+    "change_password": "Change password",
+    "not_current_information": "The information entered is not correct"
+  },
+  "reset_password_dialog": {
+    "new_password": "New password",
+    "confirm_password": "Confirm password",
+    "submit": "Submit",
+    "not_match": "Not Match",
+    "change_password_successfully": "Change password successfully",
+    "change_password_not_successful": "Password change was not successful"
+  }
+}

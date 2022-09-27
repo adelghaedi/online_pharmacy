@@ -1,0 +1,39 @@
+{
+  "login_page": {
+    "username": "نام کاربری",
+    "password": "رمز عبور",
+    "login": "ورود",
+    "password_contain_sharp": "رمز عبور باید حاوی # باشد.",
+    "password_length": "طول رمز عبور باید بیشتر از شش باشد.",
+    "username_length": "طول نام کاربری باید بیشتر از هشت باشد.",
+    "password_contain_character": "رمز عبور باید حاوی کاراکتر باشد.",
+    "sign_up": "ثبت نام",
+    "not_a_member": "آیا عضو نیستید؟",
+    "forgot_password": "فراموشی رمز عبور",
+    "login_successful": "ورود با موفقیت انجام شد",
+    "login_not_successful": "ورود موفقیت آمیز نبود"
+  },
+  "splash_page": {
+    "create_account_admin": "ساخت حساب مدیر"
+  },
+  "sign_up_page": {
+    "mobile": "تلفن همراه",
+    "last_name": "نام خانوادگی",
+    "first_name": "نام",
+    "repeat_password": "تکرار رمز عبور",
+    "invalid_mobile": "شماره تلفن نامعتبر است."
+  },
+  "forgot_password_page": {
+    "continue": "ادامه می دهید؟",
+    "change_password": "تغییر رمز عبور",
+    "not_current_information": "اطلاعات وارد شده صحیح نمی باشد"
+  },
+  "reset_password_dialog": {
+    "new_password": "رمز عبور جدید",
+    "confirm_password": "تایید رمز عبور",
+    "submit": "ثبت",
+    "not_match": "مطابقت ندارد",
+    "change_password_successfully": "رمز عبور با موفقیت تغییر کرد",
+    "change_password_not_successful": "تغییر رمز عبور موفقیت آمیز نبود"
+  }
+}

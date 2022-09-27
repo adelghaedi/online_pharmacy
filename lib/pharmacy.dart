@@ -1,7 +1,6 @@
 library pharmacy;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/infrastructure/routes/pharmacy_module_pages.dart';
+export 'src/infrastructure/routes/pharmacy_module_routes.dart';
+export 'src/infrastructure/services/localization_service.dart';
+export 'src/infrastructure/themes/theme_constants.dart';
