@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:pharmacy/pharmacy.dart' as pharmacy;
 import 'package:get_storage/get_storage.dart';
 
-void main() async{
+void main() async {
   await GetStorage.init();
   runApp(const MyApp());
 }

@@ -1,14 +1,26 @@
 {
-  "Users": [
-    {
-      "id": 1,
-      "firstName": "adel",
-      "lastName": "ghaedi",
-      "mobile": "09334220275",
-      "birthDate": "1378/10/26",
-      "userName": "adelghaedi",
-      "password": "123456a#",
-      "isAdmin": false
-    }
-  ]
+    "Users":[
+        {
+            "firstName": "sajad",
+            "lastName": "amiri",
+            "mobile": "09334220275",
+            "birthDate": "1383/01/01",
+            "userName": "sajadamiri",
+            "password": "123456#",
+            "isAdmin": true,
+            "imageBytes": null,
+            "id": 1
+          },
+          {
+            "firstName": "adel",
+            "lastName": "ghaedi",
+            "mobile": "09334220275",
+            "birthDate": "1383/01/01",
+            "userName": "adelghaedi",
+            "password": "123456#",
+            "isAdmin": false,
+            "imageBytes": null,
+            "id": 2
+        }
+    ]
 }

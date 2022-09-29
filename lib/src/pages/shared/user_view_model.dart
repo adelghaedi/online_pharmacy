@@ -2,6 +2,7 @@ class UserViewModel {
   final int id;
   final String firstName, lastName, mobile, birthDate, userName, password;
   final bool isAdmin;
+  final List? imageBytes;
 
   UserViewModel({
     required this.id,
@@ -12,6 +13,7 @@ class UserViewModel {
     required this.userName,
     required this.password,
     required this.isAdmin,
+    required this.imageBytes,
   });
 
   factory UserViewModel.fromJson(Map<String, dynamic> json) {
@@ -23,6 +25,7 @@ class UserViewModel {
         birthDate: json['birthDate'],
         userName: json['userName'],
         password: json['password'],
-        isAdmin: json['isAdmin']);
+        isAdmin: json['isAdmin'],
+        imageBytes: json['imageBytes']);
   }
 }

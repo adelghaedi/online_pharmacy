@@ -12,12 +12,10 @@ import '../../shared/repository.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 
 class LoginController extends GetxController {
+  final RxBool passwordIsVisible = false.obs;
+  final RxBool isLoading = false.obs;
 
- final RxBool passwordIsVisible = false.obs;
- final RxBool isLoading = false.obs;
-
-
- final TextEditingController userNameController = TextEditingController();
+  final TextEditingController userNameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   final GlobalKey<FormState> formKey = GlobalKey();
@@ -25,7 +23,6 @@ class LoginController extends GetxController {
   final Repository _repository = Repository();
 
   final GetStorage _getStorage = GetStorage();
-
 
   String? userNameValidator(final String? value) {
     if (value != null && value.trim().length < 8) {
@@ -57,7 +54,7 @@ class LoginController extends GetxController {
     if (formKey.currentState!.validate()) {
       isLoading.value = true;
 
-      Either<String, UserViewModel> result = await _repository.login(
+      Either<String, UserViewModel> result = await _repository.getUserInfo(
         userNameController.text,
         passwordController.text,
       );
@@ -86,7 +83,9 @@ class LoginController extends GetxController {
         backgroundColor: Colors.red);
   }
 
-  void onPressedSignUp() {}
+  void onPressedSignUp() {
+    Get.toNamed(PharmacyModuleRoutes.signUpPage);
+  }
 
   void onTapBackIcon() {
     SystemNavigator.pop();

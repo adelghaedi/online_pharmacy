@@ -50,22 +50,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="ToolWindowEmulator.ShowToolbar" value="false" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="com.android.tools.idea.emulator.zoom.toolbar.visible" value="false" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../amiri/last_sample/last_sample" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/assets/images" />
+    <property name="settings.editor.selected.configurable" value="emulator" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\assets\images" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\assets\fonts" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\src\infrastructure" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\assets\i18n" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\login\commons" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\login\controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\profile\controllers" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\shared" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\shared\models" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib" />

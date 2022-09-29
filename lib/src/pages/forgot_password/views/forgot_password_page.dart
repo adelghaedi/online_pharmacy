@@ -15,15 +15,17 @@ class ForgotPasswordPage extends GetView<ForgotPasswordController> {
       () => Stack(children: [
         Scaffold(
           appBar: _appBar(),
-          body: Padding(
-            padding: const EdgeInsets.all(utils.scaffoldPadding),
-            child: _form(context),
-          ),
+          body: _body(context),
         ),
         if (controller.isLoading.value) _progressBar(),
       ]),
     );
   }
+
+  Widget _body(BuildContext context) => Padding(
+        padding: const EdgeInsets.all(utils.scaffoldPadding),
+        child: _form(context),
+      );
 
   Widget _progressBar() => Container(
         alignment: Alignment.center,

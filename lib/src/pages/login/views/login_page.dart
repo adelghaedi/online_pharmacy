@@ -11,21 +11,14 @@ class LoginPage extends GetView<LoginController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => Stack(
+    return  Stack(
         children: [
           Scaffold(
             appBar: _appBar(),
-            body: Padding(
-              padding: const EdgeInsets.all(utils.scaffoldPadding),
-              child: Center(
-                child: _form(context),
-              ),
-            ),
+            body: _form(context),
           ),
           if (controller.isLoading.value) _progressBar()
         ],
-      ),
     );
   }
 
@@ -35,28 +28,33 @@ class LoginPage extends GetView<LoginController> {
         child: const CircularProgressIndicator(),
       );
 
-  Widget _form(final BuildContext context) => Form(
-        key: controller.formKey,
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _userNameTextField(),
-              utils.verticalSpacer20,
-              _passwordTextField(),
-              _forgotPasswordButton(),
-              utils.verticalSpacer40,
-              _loginButton(context),
-              utils.verticalSpacer40,
-              _signUpContainer(),
-            ],
+  Widget _form(final BuildContext context) => Padding(
+    padding: const EdgeInsets.all(utils.scaffoldPadding),
+    child: Center(
+      child: Form(
+            key: controller.formKey,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _userNameTextField(),
+                  utils.verticalSpacer20,
+                  _passwordTextField(),
+                  _forgotPasswordButton(),
+                  utils.verticalSpacer40,
+                  _loginButton(context),
+                  utils.verticalSpacer40,
+                  _signUpContainer(),
+                ],
+              ),
+            ),
           ),
-        ),
-      );
+    ),
+  );
 
   Widget _signUpContainer() => Container(
-        decoration: _boxDecoration(),
+        decoration: utils.decorationContainer(),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -66,14 +64,7 @@ class LoginPage extends GetView<LoginController> {
         ),
       );
 
-  BoxDecoration _boxDecoration() => BoxDecoration(
-        borderRadius: const BorderRadius.all(
-          Radius.circular(10),
-        ),
-        border: Border.all(
-          color: Colors.indigo.withOpacity(0.8),
-        ),
-      );
+
 
   Widget _signUpLink() => TextButton(
       onPressed: controller.onPressedSignUp,

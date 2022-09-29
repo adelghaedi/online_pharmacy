@@ -5,9 +5,13 @@ import '../../infrastructure/utils/utils.dart' as utils;
 import 'user_view_model.dart';
 
 class Repository {
-  final Dio _dio = Dio(BaseOptions(baseUrl: utils.baseUrlApi));
+  final Dio _dio = Dio(
+    BaseOptions(
+      baseUrl: utils.baseUrlApi,
+    ),
+  );
 
-  Future<Either<String, UserViewModel>> login(
+  Future<Either<String, UserViewModel>> getUserInfo(
       final String userName, final String password) async {
     try {
       final Response result = await _dio.get('/Users',

@@ -17,15 +17,13 @@ class ResetPasswordDialog extends GetView<ResetPasswordController> {
   }
 
   Widget _alertDialog(BuildContext context) => AlertDialog(
-        title: Text(LocaleKeys.forgot_password_page_change_password.tr),
-        contentPadding: const EdgeInsets.all(utils.scaffoldPadding),
-        content: _form(context),
-      );
+      title: Text(LocaleKeys.forgot_password_page_change_password.tr),
+      contentPadding: const EdgeInsets.all(utils.scaffoldPadding),
+      content: _form(context));
 
   Widget _form(BuildContext context) => Form(
         key: controller.formKey,
-        child: SizedBox(
-          height: 300,
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -78,7 +76,7 @@ class ResetPasswordDialog extends GetView<ResetPasswordController> {
           ],
           decoration: InputDecoration(
               hintText: utils.passwordHint,
-              suffixIcon: _visibilityIconPassword(
+              suffixIcon: utils.visibilityIconPassword(
                 passwordIsVisible: controller.confirmPasswordIsVisible.value,
                 togglePassword: controller.toggleConfirmPasswordVisibility,
               ),
@@ -97,21 +95,11 @@ class ResetPasswordDialog extends GetView<ResetPasswordController> {
           ],
           decoration: InputDecoration(
               hintText: utils.passwordHint,
-              suffixIcon: _visibilityIconPassword(
+              suffixIcon: utils.visibilityIconPassword(
                 passwordIsVisible: controller.newPasswordIsVisible.value,
                 togglePassword: controller.toggleNewPasswordVisibility,
               ),
               labelText: LocaleKeys.reset_password_dialog_new_password.tr),
-        ),
-      );
-
-  Widget _visibilityIconPassword(
-          {required final bool passwordIsVisible,
-          required final VoidCallback togglePassword}) =>
-      GestureDetector(
-        onTap: togglePassword,
-        child: Icon(
-          !passwordIsVisible ? Icons.visibility : Icons.visibility_off,
         ),
       );
 }

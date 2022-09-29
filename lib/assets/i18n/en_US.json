@@ -14,14 +14,20 @@
     "login_not_successful": "Login was not successful"
   },
   "splash_page": {
-    "create_account_admin": "Create account admin"
+    "create_account_admin": "Create account admin",
+    "connection_failed": "Connection failed"
   },
   "sign_up_page": {
     "mobile": "Phone number",
     "last_name": "Lastname",
     "first_name": "Firstname",
     "repeat_password": "Repeat password",
-    "invalid_mobile": "invalid phone number"
+    "invalid_mobile": "Phone number must be 11 digits",
+    "firstname_length": "The length of the name must be less than 50",
+    "birth_date": "Date of birth",
+    "select_brith_date": "Select your date of birth",
+    "sign_up_successful": "Sign up was successful",
+    "sign_up_not_successful": "Sign up was not Successful"
   },
   "forgot_password_page": {
     "continue": "continue",
@@ -35,5 +41,11 @@
     "not_match": "Not Match",
     "change_password_successfully": "Change password successfully",
     "change_password_not_successful": "Password change was not successful"
+  },
+  "home_page": {
+    "pharmacy": "pharmacy"
+  },
+  "profile_page": {
+    "profile": "profile"
   }
 }

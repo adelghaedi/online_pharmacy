@@ -8,6 +8,7 @@ import '../models/edit_password_dto.dart';
 import '../repositories/reset_password_repository.dart';
 import '../../shared/user_view_model.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
+import '../../../infrastructure/routes/pharmacy_module_routes.dart';
 
 class ResetPasswordController extends GetxController {
   final GlobalKey<FormState> formKey = GlobalKey();
@@ -44,7 +45,7 @@ class ResetPasswordController extends GetxController {
     isLoading.value = false;
     utils.customToast(
         msg: LocaleKeys.reset_password_dialog_change_password_successfully.tr);
-    Get.back();
+    Get.offNamed(PharmacyModuleRoutes.loginPage);
   }
 
   void _changePasswordException(final String exception) {

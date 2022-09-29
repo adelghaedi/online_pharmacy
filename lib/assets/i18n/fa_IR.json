@@ -14,14 +14,20 @@
     "login_not_successful": "ورود موفقیت آمیز نبود"
   },
   "splash_page": {
-    "create_account_admin": "ساخت حساب مدیر"
+    "create_account_admin": "ساخت حساب مدیر",
+    "connection_failed": "ارتباط برقرار نشد"
   },
   "sign_up_page": {
     "mobile": "تلفن همراه",
     "last_name": "نام خانوادگی",
     "first_name": "نام",
     "repeat_password": "تکرار رمز عبور",
-    "invalid_mobile": "شماره تلفن نامعتبر است."
+    "invalid_mobile": "شماره تلفن باید یازده رقم باشد.",
+    "firstname_length": "طول نام باید کمتر از 50 باشد.",
+    "birth_date": "تاریخ تولد",
+    "select_brith_date": "تاریخ تولد خود را انتخاب کنید.",
+    "sign_up_successful": "ثبت نام با موفقیت انجام شد.",
+    "sign_up_not_successful": "ثبت نام موفقیت آمیز نبود."
   },
   "forgot_password_page": {
     "continue": "ادامه می دهید؟",
@@ -35,5 +41,11 @@
     "not_match": "مطابقت ندارد",
     "change_password_successfully": "رمز عبور با موفقیت تغییر کرد",
     "change_password_not_successful": "تغییر رمز عبور موفقیت آمیز نبود"
+  },
+  "home_page": {
+    "pharmacy": "داروخانه"
+  },
+  "profile_page": {
+    "profile": "مشخصات کاربر"
   }
 }

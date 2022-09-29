@@ -5,6 +5,7 @@ ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   fontFamily: 'IranSans',
   scaffoldBackgroundColor: Colors.grey.shade200,
+
   progressIndicatorTheme: ProgressIndicatorThemeData(
     color: Colors.indigo.withOpacity(
       0.8,

@@ -28,11 +28,20 @@ class LocaleKeys {
       'login_page_login_not_successful';
   static const splash_page_create_account_admin =
       'splash_page_create_account_admin';
+  static const splash_page_connection_failed = 'splash_page_connection_failed';
   static const sign_up_page_mobile = 'sign_up_page_mobile';
   static const sign_up_page_last_name = 'sign_up_page_last_name';
   static const sign_up_page_first_name = 'sign_up_page_first_name';
   static const sign_up_page_repeat_password = 'sign_up_page_repeat_password';
   static const sign_up_page_invalid_mobile = 'sign_up_page_invalid_mobile';
+  static const sign_up_page_firstname_length = 'sign_up_page_firstname_length';
+  static const sign_up_page_birth_date = 'sign_up_page_birth_date';
+  static const sign_up_page_select_brith_date =
+      'sign_up_page_select_brith_date';
+  static const sign_up_page_sign_up_successful =
+      'sign_up_page_sign_up_successful';
+  static const sign_up_page_sign_up_not_successful =
+      'sign_up_page_sign_up_not_successful';
   static const forgot_password_page_continue = 'forgot_password_page_continue';
   static const forgot_password_page_change_password =
       'forgot_password_page_change_password';
@@ -49,6 +58,8 @@ class LocaleKeys {
       'reset_password_dialog_change_password_successfully';
   static const reset_password_dialog_change_password_not_successful =
       'reset_password_dialog_change_password_not_successful';
+  static const home_page_pharmacy = 'home_page_pharmacy';
+  static const profile_page_profile = 'profile_page_profile';
 }
 
 class Locales {
@@ -68,11 +79,18 @@ class Locales {
     'login_page_login_successful': 'Login was successful',
     'login_page_login_not_successful': 'Login was not successful',
     'splash_page_create_account_admin': 'Create account admin',
+    'splash_page_connection_failed': 'Connection failed',
     'sign_up_page_mobile': 'Phone number',
     'sign_up_page_last_name': 'Lastname',
     'sign_up_page_first_name': 'Firstname',
     'sign_up_page_repeat_password': 'Repeat password',
-    'sign_up_page_invalid_mobile': 'invalid phone number',
+    'sign_up_page_invalid_mobile': 'Phone number must be 11 digits',
+    'sign_up_page_firstname_length':
+        'The length of the name must be less than 50',
+    'sign_up_page_birth_date': 'Date of birth',
+    'sign_up_page_select_brith_date': 'Select your date of birth',
+    'sign_up_page_sign_up_successful': 'Sign up was successful',
+    'sign_up_page_sign_up_not_successful': 'Sign up was not Successful',
     'forgot_password_page_continue': 'continue',
     'forgot_password_page_change_password': 'Change password',
     'forgot_password_page_not_current_information':
@@ -85,6 +103,8 @@ class Locales {
         'Change password successfully',
     'reset_password_dialog_change_password_not_successful':
         'Password change was not successful',
+    'home_page_pharmacy': 'pharmacy',
+    'profile_page_profile': 'profile',
   };
   static const fa_IR = {
     'login_page_username': 'نام کاربری',
@@ -100,11 +120,17 @@ class Locales {
     'login_page_login_successful': 'ورود با موفقیت انجام شد',
     'login_page_login_not_successful': 'ورود موفقیت آمیز نبود',
     'splash_page_create_account_admin': 'ساخت حساب مدیر',
+    'splash_page_connection_failed': 'ارتباط برقرار نشد',
     'sign_up_page_mobile': 'تلفن همراه',
     'sign_up_page_last_name': 'نام خانوادگی',
     'sign_up_page_first_name': 'نام',
     'sign_up_page_repeat_password': 'تکرار رمز عبور',
-    'sign_up_page_invalid_mobile': 'شماره تلفن نامعتبر است.',
+    'sign_up_page_invalid_mobile': 'شماره تلفن باید یازده رقم باشد.',
+    'sign_up_page_firstname_length': 'طول نام باید کمتر از 50 باشد.',
+    'sign_up_page_birth_date': 'تاریخ تولد',
+    'sign_up_page_select_brith_date': 'تاریخ تولد خود را انتخاب کنید.',
+    'sign_up_page_sign_up_successful': 'ثبت نام با موفقیت انجام شد.',
+    'sign_up_page_sign_up_not_successful': 'ثبت نام موفقیت آمیز نبود.',
     'forgot_password_page_continue': 'ادامه می دهید؟',
     'forgot_password_page_change_password': 'تغییر رمز عبور',
     'forgot_password_page_not_current_information':
@@ -117,5 +143,7 @@ class Locales {
         'رمز عبور با موفقیت تغییر کرد',
     'reset_password_dialog_change_password_not_successful':
         'تغییر رمز عبور موفقیت آمیز نبود',
+    'home_page_pharmacy': 'داروخانه',
+    'profile_page_profile': 'مشخصات کاربر',
   };
 }
