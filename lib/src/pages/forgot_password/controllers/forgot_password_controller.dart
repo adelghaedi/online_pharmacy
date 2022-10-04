@@ -31,7 +31,7 @@ class ForgotPasswordController extends GetxController {
     if (value != null && value.trim().length == 11 && value.startsWith('0')) {
       return null;
     }
-    return LocaleKeys.sign_up_page_invalid_mobile.tr;
+    return LocaleKeys.user_page_invalid_mobile.tr;
   }
 
   void onTapBackIcon() {

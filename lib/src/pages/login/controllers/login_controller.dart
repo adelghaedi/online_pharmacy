@@ -64,16 +64,28 @@ class LoginController extends GetxController {
   }
 
   void _loginSuccessful(final UserViewModel user) {
-    isLoading.value = false;
+    if (user.isAdmin) {
+      isLoading.value = false;
 
-    _getStorage.write('userName', userNameController.text);
-    _getStorage.write('password', passwordController.text);
+      utils.customToast(
+        msg: LocaleKeys.login_page_login_successful.tr,
+      );
 
-    utils.customToast(
-      msg: LocaleKeys.login_page_login_successful.tr,
-    );
+      Get.offAndToNamed(
+        PharmacyModuleRoutes.homeAdminPage,
+      );
+    } else {
+      isLoading.value = false;
 
-    Get.offAndToNamed(PharmacyModuleRoutes.homePage);
+      _getStorage.write('userName', userNameController.text);
+      _getStorage.write('password', passwordController.text);
+
+      utils.customToast(
+        msg: LocaleKeys.login_page_login_successful.tr,
+      );
+
+      Get.offAndToNamed(PharmacyModuleRoutes.homePage);
+    }
   }
 
   void _loginException(final String exception) {
@@ -84,7 +96,7 @@ class LoginController extends GetxController {
   }
 
   void onPressedSignUp() {
-    Get.toNamed(PharmacyModuleRoutes.signUpPage);
+    Get.toNamed(PharmacyModuleRoutes.addUserPage);
   }
 
   void onTapBackIcon() {

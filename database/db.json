@@ -1,26 +1,36 @@
 {
-    "Users":[
-        {
-            "firstName": "sajad",
-            "lastName": "amiri",
-            "mobile": "09334220275",
-            "birthDate": "1383/01/01",
-            "userName": "sajadamiri",
-            "password": "123456#",
-            "isAdmin": true,
-            "imageBytes": null,
-            "id": 1
-          },
-          {
-            "firstName": "adel",
-            "lastName": "ghaedi",
-            "mobile": "09334220275",
-            "birthDate": "1383/01/01",
-            "userName": "adelghaedi",
-            "password": "123456#",
-            "isAdmin": false,
-            "imageBytes": null,
-            "id": 2
-        }
-    ]
+  "Users": [
+    {
+      "firstName": "sajad",
+      "lastName": "amiri",
+      "mobile": "09334220275",
+      "birthDate": "1383/01/01",
+      "userName": "sajadamiri",
+      "password": "123456#",
+      "isAdmin": true,
+      "base64Image":null,
+      "id": 1
+    },
+    {
+      "firstName": "adel",
+      "lastName": "ghaedi",
+      "mobile": "09334220275",
+      "birthDate": "1383/01/01",
+      "userName": "adelghaedi",
+      "password": "123456#",
+      "isAdmin": false,
+      "base64Image": null,
+      "id": 2
+    }
+  ],
+  "Pharmacies": [
+    {
+      "name": "نرجس",
+      "address": "والفجر",
+      "doctorName": "رضا محمدی",
+      "dateOfEstablishment": "1389/10/10",
+      "base64Image":null,
+      "id": 1
+    }
+  ]
 }

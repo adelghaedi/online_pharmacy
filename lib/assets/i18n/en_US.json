@@ -17,18 +17,6 @@
     "create_account_admin": "Create account admin",
     "connection_failed": "Connection failed"
   },
-  "sign_up_page": {
-    "mobile": "Phone number",
-    "last_name": "Lastname",
-    "first_name": "Firstname",
-    "repeat_password": "Repeat password",
-    "invalid_mobile": "Phone number must be 11 digits",
-    "firstname_length": "The length of the name must be less than 50",
-    "birth_date": "Date of birth",
-    "select_brith_date": "Select your date of birth",
-    "sign_up_successful": "Sign up was successful",
-    "sign_up_not_successful": "Sign up was not Successful"
-  },
   "forgot_password_page": {
     "continue": "continue",
     "change_password": "Change password",
@@ -47,5 +35,48 @@
   },
   "profile_page": {
     "profile": "profile"
+  },
+  "home_admin_page": {
+    "drugs": "Drugs",
+    "pharmacies": "Pharmacys"
+  },
+  "drawer": {
+    "exit": "Exit"
+  },
+  "pharmacies_page": {
+    "not_available_pharmacies": "No pharmacy has been defined"
+  },
+  "detail_pharmacy_page": {
+    "pharmacy_profile": "Pharmacy profile",
+    "edit": "Edit "
+  },
+  "user_page": {
+    "mobile": "Phone number",
+    "last_name": "Lastname",
+    "first_name": "Firstname",
+    "repeat_password": "Repeat password",
+    "invalid_mobile": "Phone number must be 11 digits",
+    "firstname_length": "The length of the name must be less than 50",
+    "birth_date": "Date of birth",
+    "select_brith_date": "Select your date of birth",
+    "sign_up_successful": "Sign up was successful",
+    "sign_up_not_successful": "Sign up was not Successful",
+    "edit_info": "Edit Information",
+    "change_info": "Information changed successfully",
+    "change_info_failed": "Change of information was not successful"
+  },
+  "pharmacy_page": {
+    "pharmacy_name": "name",
+    "address": "address",
+    "doctor_name": "The name of the doctor",
+    "select_date_of_establishment": "Select the date of establishment",
+    "date_of_establishment": "Date of Establishment",
+    "pharmacy_name_length": "The length of the name must be less than 100",
+    "address_length": "The length of the address must be less than 250",
+    "doctor_name_length": "The length of the name must be less than 120",
+    "add_pharmacy_successful": "Pharmacy added successfully",
+    "add_pharmacy_failed": "The pharmacy could not be added successfully",
+    "add_pharmacy": "Add pharmacy",
+    "edit_pharmacy": "Edit Pharmacy"
   }
 }

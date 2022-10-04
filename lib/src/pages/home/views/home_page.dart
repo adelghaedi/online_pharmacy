@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pharmacy/generated/locales.g.dart';
 
 import '../controllers/home_controller.dart';
+import '../../../../generated/locales.g.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({super.key});

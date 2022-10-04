@@ -5,7 +5,20 @@ ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   fontFamily: 'IranSans',
   scaffoldBackgroundColor: Colors.grey.shade200,
-
+  dividerColor: Colors.black,
+  iconTheme: const IconThemeData(color: Colors.indigo),
+  listTileTheme: ListTileThemeData(
+    shape: RoundedRectangleBorder(
+      side: BorderSide(width: 1.5, color: Colors.indigo.withOpacity(0.8)),
+      borderRadius: const BorderRadius.all(
+        Radius.circular(12.0),
+      ),
+    ),
+  ),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: Colors.indigo.withOpacity(0.8),
+    foregroundColor: Colors.white,
+  ),
   progressIndicatorTheme: ProgressIndicatorThemeData(
     color: Colors.indigo.withOpacity(
       0.8,
@@ -25,7 +38,7 @@ ThemeData lightTheme = ThemeData(
   textButtonTheme: TextButtonThemeData(
     style: ButtonStyle(
       foregroundColor: MaterialStateProperty.all<Color>(
-        Colors.indigo.withOpacity(0.8),
+        Colors.black,
       ),
     ),
   ),
@@ -90,6 +103,20 @@ ThemeData darkTheme = ThemeData(
   fontFamily: 'IranSans',
   primarySwatch: Colors.indigo,
   scaffoldBackgroundColor: Colors.grey.shade900,
+  dividerColor: Colors.white,
+  iconTheme: const IconThemeData(color: Colors.indigo),
+  listTileTheme: ListTileThemeData(
+    shape: RoundedRectangleBorder(
+      side: BorderSide(width: 1.5, color: Colors.indigo.withOpacity(0.6)),
+      borderRadius: const BorderRadius.all(
+        Radius.circular(12.0),
+      ),
+    ),
+  ),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: Colors.indigo.withOpacity(0.6),
+    foregroundColor: Colors.white,
+  ),
   progressIndicatorTheme:
       ProgressIndicatorThemeData(color: Colors.indigo.withOpacity(0.6)),
   outlinedButtonTheme: OutlinedButtonThemeData(
@@ -106,7 +133,7 @@ ThemeData darkTheme = ThemeData(
   textButtonTheme: TextButtonThemeData(
     style: ButtonStyle(
       foregroundColor: MaterialStateProperty.all<Color>(
-        Colors.indigo.withOpacity(0.6),
+        Colors.white,
       ),
     ),
   ),

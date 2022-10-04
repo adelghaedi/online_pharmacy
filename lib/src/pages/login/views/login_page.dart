@@ -5,38 +5,39 @@ import 'package:get/get.dart';
 import '../controllers/login_controller.dart';
 import '../../../../generated/locales.g.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
+import '../../../components/customScaffold/views/custom_scaffold.dart';
 
 class LoginPage extends GetView<LoginController> {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Stack(
+    return Obx(
+      () => Stack(
         children: [
-          Scaffold(
-            appBar: _appBar(),
-            body: _form(context),
-          ),
-          if (controller.isLoading.value) _progressBar()
+          _scaffold(context),
+          if (controller.isLoading.value) utils.customProgressBar(),
         ],
+      ),
     );
   }
 
-  Widget _progressBar() => Container(
-        alignment: Alignment.center,
-        color: Colors.black.withOpacity(0.3),
-        child: const CircularProgressIndicator(),
+  Widget _scaffold(BuildContext context) => CustomScaffold(
+        titleAppBar: LocaleKeys.login_page_login.tr,
+        wantFloatActionButton: false,
+        wantDrawer: false,
+        body: _form(context),
+        isHomeAdminPage: true,
       );
 
   Widget _form(final BuildContext context) => Padding(
-    padding: const EdgeInsets.all(utils.scaffoldPadding),
-    child: Center(
-      child: Form(
+        padding: const EdgeInsets.all(utils.scaffoldPadding),
+        child: Center(
+          child: Form(
             key: controller.formKey,
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   _userNameTextField(),
                   utils.verticalSpacer20,
@@ -50,8 +51,8 @@ class LoginPage extends GetView<LoginController> {
               ),
             ),
           ),
-    ),
-  );
+        ),
+      );
 
   Widget _signUpContainer() => Container(
         decoration: utils.decorationContainer(),
@@ -64,11 +65,14 @@ class LoginPage extends GetView<LoginController> {
         ),
       );
 
-
-
   Widget _signUpLink() => TextButton(
-      onPressed: controller.onPressedSignUp,
-      child: Text(LocaleKeys.login_page_sign_up.tr));
+        style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all<Color>(
+          Colors.indigo.withOpacity(0.8),
+        )),
+        onPressed: controller.onPressedSignUp,
+        child: Text(LocaleKeys.login_page_sign_up.tr),
+      );
 
   Widget _loginButton(final BuildContext context) => SizedBox(
         width: double.infinity,
@@ -82,22 +86,12 @@ class LoginPage extends GetView<LoginController> {
       );
 
   Widget _forgotPasswordButton() => TextButton(
+        style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all<Color>(
+          Colors.indigo.withOpacity(0.8),
+        )),
         onPressed: controller.onPressedForgotPassword,
         child: Text(LocaleKeys.login_page_forgot_password.tr),
-      );
-
-  AppBar _appBar() => AppBar(
-        leading: _backIcon(),
-        title: Text(
-          LocaleKeys.login_page_login.tr,
-        ),
-      );
-
-  Widget _backIcon() => GestureDetector(
-        onTap: controller.onTapBackIcon,
-        child: const Icon(
-          Icons.chevron_left,
-        ),
       );
 
   Widget _userNameTextField() => TextFormField(

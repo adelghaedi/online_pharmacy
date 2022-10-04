@@ -10,24 +10,12 @@
     "sign_up": "ثبت نام",
     "not_a_member": "آیا عضو نیستید؟",
     "forgot_password": "فراموشی رمز عبور",
-    "login_successful": "ورود با موفقیت انجام شد",
-    "login_not_successful": "ورود موفقیت آمیز نبود"
+    "login_successful": "ورود با موفقیت انجام شد.",
+    "login_not_successful": "ورود موفقیت آمیز نبود."
   },
   "splash_page": {
     "create_account_admin": "ساخت حساب مدیر",
     "connection_failed": "ارتباط برقرار نشد"
-  },
-  "sign_up_page": {
-    "mobile": "تلفن همراه",
-    "last_name": "نام خانوادگی",
-    "first_name": "نام",
-    "repeat_password": "تکرار رمز عبور",
-    "invalid_mobile": "شماره تلفن باید یازده رقم باشد.",
-    "firstname_length": "طول نام باید کمتر از 50 باشد.",
-    "birth_date": "تاریخ تولد",
-    "select_brith_date": "تاریخ تولد خود را انتخاب کنید.",
-    "sign_up_successful": "ثبت نام با موفقیت انجام شد.",
-    "sign_up_not_successful": "ثبت نام موفقیت آمیز نبود."
   },
   "forgot_password_page": {
     "continue": "ادامه می دهید؟",
@@ -46,6 +34,49 @@
     "pharmacy": "داروخانه"
   },
   "profile_page": {
-    "profile": "مشخصات کاربر"
+    "profile": "پروفایل"
+  },
+  "home_admin_page": {
+    "drugs": "داروها",
+    "pharmacies": "داروخانه ها"
+  },
+  "drawer": {
+    "exit": "خروج"
+  },
+  "pharmacies_page": {
+    "not_available_pharmacies": "هیچ داروخانه ای تعریف نشده است."
+  },
+  "detail_pharmacy_page": {
+    "pharmacy_profile": "مشخصات داروخانه",
+    "edit": "ویرایش"
+  },
+  "user_page": {
+    "mobile": "تلفن همراه",
+    "last_name": "نام خانوادگی",
+    "first_name": "نام",
+    "repeat_password": "تکرار رمز عبور",
+    "invalid_mobile": "شماره تلفن باید یازده رقم باشد.",
+    "firstname_length": "طول نام باید کمتر از 50 باشد.",
+    "birth_date": "تاریخ تولد",
+    "select_brith_date": "تاریخ تولد خود را انتخاب کنید.",
+    "sign_up_successful": "ثبت نام با موفقیت انجام شد.",
+    "sign_up_not_successful": "ثبت نام موفقیت آمیز نبود.",
+    "edit_info": "ویرایش اطلاعات",
+    "change_info": "اطلاعات با موفقیت تغییر کرد.",
+    "change_info_failed": "تغییر اطلاعات موفقیت آمیز نبود."
+  },
+  "pharmacy_page": {
+    "pharmacy_name": "نام",
+    "address": "آدرس",
+    "doctor_name": "نام دکتر",
+    "select_date_of_establishment": "تاریخ تاسیس را انتخاب کنید.",
+    "date_of_establishment": "تاریخ تاسیس",
+    "pharmacy_name_length": "طول نام باید کمتر از 100 باشد.",
+    "address_length": "طول آدرس باید کمتر از 250 باشد.",
+    "doctor_name_length": "طول نام دکتر باید کمتر از 120 باشد.",
+    "add_pharmacy_successful": "داروخانه با موفقیت اضافه شد.",
+    "add_pharmacy_failed": "داروخانه با موفقیت اضافه نشد.",
+    "add_pharmacy": "افزودن داروخانه",
+    "edit_pharmacy": "ویرایش داروخانه"
   }
 }

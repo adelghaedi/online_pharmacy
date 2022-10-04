@@ -4,8 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:toast/toast.dart';
 
-import '../repositories/splash_repository.dart';
-import '../../../pages/shared/user_view_model.dart';
+import '../../shared/user_view_model.dart';
 import '../../../../generated/locales.g.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../../infrastructure/routes/pharmacy_module_routes.dart';
@@ -21,7 +20,6 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   final GetStorage _getStorage = GetStorage();
   final Repository _repository = Repository();
-  final SplashRepository _splashRepository = SplashRepository();
 
   bool isLoading = true;
 
@@ -80,14 +78,13 @@ class _SplashPageState extends State<SplashPage> {
       );
 
   void _onPressedCreateAccount() {
-    Get.offAndToNamed(PharmacyModuleRoutes.signUpAdminPage);
+    Get.offAndToNamed(PharmacyModuleRoutes.addAdminPage);
   }
 
   Future<void> checkExistsAdmin(final BuildContext context) async {
     ToastContext().init(context);
 
-    Either<String, UserViewModel> result =
-        await _splashRepository.checkExistsAdmin();
+    Either<String, UserViewModel> result = await _repository.getAdminInfo();
 
     await result.fold(_existsAdminException, _existsAdminSuccessful);
   }

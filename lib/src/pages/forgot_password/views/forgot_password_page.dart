@@ -17,7 +17,7 @@ class ForgotPasswordPage extends GetView<ForgotPasswordController> {
           appBar: _appBar(),
           body: _body(context),
         ),
-        if (controller.isLoading.value) _progressBar(),
+        if (controller.isLoading.value) utils.customProgressBar(),
       ]),
     );
   }
@@ -27,11 +27,6 @@ class ForgotPasswordPage extends GetView<ForgotPasswordController> {
         child: _form(context),
       );
 
-  Widget _progressBar() => Container(
-        alignment: Alignment.center,
-        color: Colors.black.withOpacity(0.3),
-        child: const CircularProgressIndicator(),
-      );
 
   Widget _form(BuildContext context) => Form(
         key: controller.formKey,
@@ -100,7 +95,7 @@ class ForgotPasswordPage extends GetView<ForgotPasswordController> {
         ],
         decoration: InputDecoration(
           hintText: utils.mobileHint,
-          labelText: LocaleKeys.sign_up_page_mobile.tr,
+          labelText: LocaleKeys.user_page_mobile.tr,
         ),
       );
 }

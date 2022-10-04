@@ -8,14 +8,36 @@ class Repository {
   final Dio _dio = Dio(
     BaseOptions(
       baseUrl: utils.baseUrlApi,
+      connectTimeout: 5000,
     ),
   );
 
   Future<Either<String, UserViewModel>> getUserInfo(
       final String userName, final String password) async {
     try {
-      final Response result = await _dio.get('/Users',
+      final Response result = await _dio.get(utils.endPointUrlApiUsers,
           queryParameters: {'userName': userName, 'password': password});
+
+      return Right(
+        UserViewModel.fromJson(
+          result.data.first,
+        ),
+      );
+    } catch (e) {
+      return Left(
+        e.toString(),
+      );
+    }
+  }
+
+  Future<Either<String, UserViewModel>> getAdminInfo() async {
+    try {
+      final Response result = await _dio.get(
+        utils.endPointUrlApiUsers,
+        queryParameters: {
+          'isAdmin': true,
+        },
+      );
 
       return Right(UserViewModel.fromJson(result.data.first));
     } catch (e) {

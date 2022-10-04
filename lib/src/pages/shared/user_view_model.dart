@@ -2,7 +2,7 @@ class UserViewModel {
   final int id;
   final String firstName, lastName, mobile, birthDate, userName, password;
   final bool isAdmin;
-  final List? imageBytes;
+  final String? base64Image;
 
   UserViewModel({
     required this.id,
@@ -13,7 +13,7 @@ class UserViewModel {
     required this.userName,
     required this.password,
     required this.isAdmin,
-    required this.imageBytes,
+    required this.base64Image,
   });
 
   factory UserViewModel.fromJson(Map<String, dynamic> json) {
@@ -26,6 +26,20 @@ class UserViewModel {
         userName: json['userName'],
         password: json['password'],
         isAdmin: json['isAdmin'],
-        imageBytes: json['imageBytes']);
+        base64Image: json['base64Image']);
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'firstName': firstName,
+      'lastName': lastName,
+      'mobile': mobile,
+      'birthDate': birthDate,
+      'userName': userName,
+      'password': password,
+      'isAdmin': isAdmin,
+      'base64Image': base64Image,
+    };
   }
 }

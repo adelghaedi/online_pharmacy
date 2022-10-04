@@ -11,7 +11,7 @@ class ForgotPasswordRepository {
       final String userName, final String mobile) async {
     try {
       final Response result = await _dio.get(
-        '/Users',
+        utils.endPointUrlApiUsers,
         queryParameters: {
           'userName': userName,
           'mobile': mobile,

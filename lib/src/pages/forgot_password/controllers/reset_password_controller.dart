@@ -45,7 +45,7 @@ class ResetPasswordController extends GetxController {
     isLoading.value = false;
     utils.customToast(
         msg: LocaleKeys.reset_password_dialog_change_password_successfully.tr);
-    Get.offNamed(PharmacyModuleRoutes.loginPage);
+    Get.offAllNamed(PharmacyModuleRoutes.loginPage);
   }
 
   void _changePasswordException(final String exception) {
