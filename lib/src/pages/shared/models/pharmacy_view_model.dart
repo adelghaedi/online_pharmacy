@@ -1,3 +1,6 @@
+import 'drug_pharmacy_view_model.dart';
+import 'drug_view_model.dart';
+
 class PharmacyViewModel {
   final int id;
   final String name;
@@ -5,6 +8,7 @@ class PharmacyViewModel {
   final String doctorName;
   final String dateOfEstablishment;
   final String? base64Image;
+  final List<DrugPharmacyViewModel> drugs;
 
   PharmacyViewModel({
     required this.id,
@@ -13,6 +17,7 @@ class PharmacyViewModel {
     required this.doctorName,
     required this.dateOfEstablishment,
     required this.base64Image,
+    required this.drugs,
   });
 
   factory PharmacyViewModel.fromJson(final Map<String, dynamic> json) {
@@ -23,6 +28,14 @@ class PharmacyViewModel {
       doctorName: json['doctorName'],
       dateOfEstablishment: json['dateOfEstablishment'],
       base64Image: json['base64Image'],
+      drugs: (json['drugs'] as List)
+          .map(
+            (json) => DrugPharmacyViewModel(
+              drug: DrugViewModel.fromJson(json['drug']),
+              price: json['price'],
+            ),
+          )
+          .toList(),
     );
   }
 
@@ -34,6 +47,11 @@ class PharmacyViewModel {
       'doctorName': doctorName,
       'dateOfEstablishment': dateOfEstablishment,
       'base64Image': base64Image,
+      'drugs': drugs
+          .map(
+            (drug) => drug.toJson(),
+          )
+          .toList(),
     };
   }
 }

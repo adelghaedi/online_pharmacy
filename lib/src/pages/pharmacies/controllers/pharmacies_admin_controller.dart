@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
 
-import '../repositories/pharmacies_repository.dart';
-import '../models/pharmacy_view_model.dart';
+import '../../shared/models/pharmacy_view_model.dart';
 import '../../../infrastructure/routes/pharmacy_module_routes.dart';
+import '../repositories/pharmacies_repository.dart';
 
-class PharmaciesController extends GetxController {
+class PharmaciesAdminController extends GetxController {
   final PharmaciesRepository _repository = PharmaciesRepository();
 
   final RxList pharmacyList = RxList();
@@ -45,16 +45,20 @@ class PharmaciesController extends GetxController {
 
   Future<void> onPressedDeleteIcon(final int pharmacyId) async {
     final Either<String, dynamic> result =
-        await _repository.deletePharmacyWithId(pharmacyId);
-    await result.fold(_deletePharmacyException,
-        (final dynamic data) => _deletePharmacySuccessful(pharmacyId));
+        await _repository.removePharmacyWithId(pharmacyId);
+    await result.fold(
+      _removePharmacyException,
+      (final dynamic data) => _removePharmacySuccessful(
+        pharmacyId,
+      ),
+    );
   }
 
-  Future<void> _deletePharmacySuccessful(final int id) async {
+  Future<void> _removePharmacySuccessful(final int id) async {
     pharmacyList.removeWhere((element) => element.id == id);
   }
 
-  Future<void> _deletePharmacyException(final String exception) async {}
+  Future<void> _removePharmacyException(final String exception) async {}
 
   void onPressedDetailIcon(final Map<String, dynamic> pharmacyInfo) async {
     final result = await Get.toNamed(
@@ -70,5 +74,12 @@ class PharmaciesController extends GetxController {
       pharmacyList.removeAt(itemUpdatedIndex);
       pharmacyList.insert(itemUpdatedIndex, result);
     }
+  }
+
+  void onPressedDrugsManagement(final Map<String, dynamic> pharmacyInfo) async {
+    await Get.toNamed(
+      PharmacyModuleRoutes.pharmacyDrugManagementPage,
+      arguments: pharmacyInfo['id'],
+    );
   }
 }

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../generated/locales.g.dart';
-import '../controllers/profile_controller.dart';
+import '../controllers/profile_base_controller.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../../components/customScaffold/views/custom_scaffold.dart';
 import '../../shared/circle_image.dart';
 
-class ProfilePage extends GetView<ProfileController> {
+class ProfilePage<T extends ProfileBaseController> extends GetView<T> {
   const ProfilePage({super.key});
 
   @override
@@ -15,7 +15,7 @@ class ProfilePage extends GetView<ProfileController> {
     return Obx(
       () => Stack(children: [
         _scaffold(),
-        if (controller.adminInfo.value == null) utils.customProgressBar(),
+        if (controller.userInfo.value == null) utils.customProgressBar(),
       ]),
     );
   }
@@ -51,38 +51,37 @@ class ProfilePage extends GetView<ProfileController> {
       );
 
   Widget _circleImage() => CircleImage(
-        imageAssetsUrl: utils.personImageUrl,
         imageSize: 80,
-        base64Image: controller.adminInfo.value?.base64Image ?? '',
+        base64Image: controller.userInfo.value?.base64Image,
       );
 
   Widget _userNameListTile() => ListTile(
         title: utils.titleListTile(LocaleKeys.login_page_username.tr),
         subtitle:
-            utils.subTitleListTile(controller.adminInfo.value?.userName ?? ''),
+            utils.subTitleListTile(controller.userInfo.value?.userName ?? ''),
       );
 
   Widget _birthDateListTile() => ListTile(
         title: utils.titleListTile(LocaleKeys.user_page_birth_date.tr),
         subtitle:
-            utils.subTitleListTile(controller.adminInfo.value?.birthDate ?? ''),
+            utils.subTitleListTile(controller.userInfo.value?.birthDate ?? ''),
       );
 
   Widget _mobileListTile() => ListTile(
         title: utils.titleListTile(LocaleKeys.user_page_mobile.tr),
         subtitle:
-            utils.subTitleListTile(controller.adminInfo.value?.mobile ?? ''),
+            utils.subTitleListTile(controller.userInfo.value?.mobile ?? ''),
       );
 
   Widget _lastNameListTile() => ListTile(
         title: utils.titleListTile(LocaleKeys.user_page_last_name.tr),
         subtitle:
-            utils.subTitleListTile(controller.adminInfo.value?.lastName ?? ''),
+            utils.subTitleListTile(controller.userInfo.value?.lastName ?? ''),
       );
 
   Widget _firstNameListTile() => ListTile(
         title: utils.titleListTile(LocaleKeys.user_page_first_name.tr),
         subtitle:
-            utils.subTitleListTile(controller.adminInfo.value?.firstName ?? ''),
+            utils.subTitleListTile(controller.userInfo.value?.firstName ?? ''),
       );
 }

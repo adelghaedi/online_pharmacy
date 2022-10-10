@@ -31,14 +31,13 @@
     "change_password_not_successful": "Password change was not successful"
   },
   "home_page": {
-    "pharmacy": "pharmacy"
+    "drugs": "Drugs",
+    "pharmacies": "Pharmacys",
+    "shopping_cart": "Shopping cart",
+    "pharmacy": "Pharmacy"
   },
   "profile_page": {
     "profile": "profile"
-  },
-  "home_admin_page": {
-    "drugs": "Drugs",
-    "pharmacies": "Pharmacys"
   },
   "drawer": {
     "exit": "Exit"
@@ -78,5 +77,31 @@
     "add_pharmacy_failed": "The pharmacy could not be added successfully",
     "add_pharmacy": "Add pharmacy",
     "edit_pharmacy": "Edit Pharmacy"
+  },
+  "drugs_page": {
+    "not_available_drugs": "No drugs has been defined"
+  },
+  "drug_dialog": {
+    "add_drug": "Add drug",
+    "edit_drug": "Edit drug",
+    "manufacturing_company_name": "manufacturingCompanyName",
+    "drug_name_empty": "Enter the name of the drug",
+    "manufacturing_company_name_empty": "Enter the name of the manufacturer",
+    "add_drug_failed": "Addition of drug was not successful",
+    "add_drug_successful": "Drug added successfully",
+    "change_drug_successful": "Drug information has been successfully changed",
+    "change_drug_failed": "Changing drug information was not successful"
+  },
+  "drugs_management": {
+    "drugs_management": "Drugs Management",
+    "no_defined_drug_for_pharmacy": "No drug has been defined for this pharmacy",
+    "show_drug": "Display capability"
+  },
+  "add_drug_to_pharmacy_dialog": {
+    "price": "Price",
+    "select_drug": "Select the desired drug",
+    "price_validate": "The price must be greater than or equal to 1000",
+    "add_drug_to_pharmacy_successful": "The drug was successfully added to the pharmacy drugs",
+    "add_drug_to_pharmacy_failed": "Addition of drug to pharmacy drugs was not successful"
   }
 }

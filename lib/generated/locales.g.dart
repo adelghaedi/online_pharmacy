@@ -45,10 +45,11 @@ class LocaleKeys {
       'reset_password_dialog_change_password_successfully';
   static const reset_password_dialog_change_password_not_successful =
       'reset_password_dialog_change_password_not_successful';
+  static const home_page_drugs = 'home_page_drugs';
+  static const home_page_pharmacies = 'home_page_pharmacies';
+  static const home_page_shopping_cart = 'home_page_shopping_cart';
   static const home_page_pharmacy = 'home_page_pharmacy';
   static const profile_page_profile = 'profile_page_profile';
-  static const home_admin_page_drugs = 'home_admin_page_drugs';
-  static const home_admin_page_pharmacies = 'home_admin_page_pharmacies';
   static const drawer_exit = 'drawer_exit';
   static const pharmacies_page_not_available_pharmacies =
       'pharmacies_page_not_available_pharmacies';
@@ -87,6 +88,37 @@ class LocaleKeys {
       'pharmacy_page_add_pharmacy_failed';
   static const pharmacy_page_add_pharmacy = 'pharmacy_page_add_pharmacy';
   static const pharmacy_page_edit_pharmacy = 'pharmacy_page_edit_pharmacy';
+  static const drugs_page_not_available_drugs =
+      'drugs_page_not_available_drugs';
+  static const drug_dialog_add_drug = 'drug_dialog_add_drug';
+  static const drug_dialog_edit_drug = 'drug_dialog_edit_drug';
+  static const drug_dialog_manufacturing_company_name =
+      'drug_dialog_manufacturing_company_name';
+  static const drug_dialog_drug_name_empty = 'drug_dialog_drug_name_empty';
+  static const drug_dialog_manufacturing_company_name_empty =
+      'drug_dialog_manufacturing_company_name_empty';
+  static const drug_dialog_add_drug_failed = 'drug_dialog_add_drug_failed';
+  static const drug_dialog_add_drug_successful =
+      'drug_dialog_add_drug_successful';
+  static const drug_dialog_change_drug_successful =
+      'drug_dialog_change_drug_successful';
+  static const drug_dialog_change_drug_failed =
+      'drug_dialog_change_drug_failed';
+  static const drugs_management_drugs_management =
+      'drugs_management_drugs_management';
+  static const drugs_management_no_defined_drug_for_pharmacy =
+      'drugs_management_no_defined_drug_for_pharmacy';
+  static const drugs_management_show_drug = 'drugs_management_show_drug';
+  static const add_drug_to_pharmacy_dialog_price =
+      'add_drug_to_pharmacy_dialog_price';
+  static const add_drug_to_pharmacy_dialog_select_drug =
+      'add_drug_to_pharmacy_dialog_select_drug';
+  static const add_drug_to_pharmacy_dialog_price_validate =
+      'add_drug_to_pharmacy_dialog_price_validate';
+  static const add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_successful =
+      'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_successful';
+  static const add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_failed =
+      'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_failed';
 }
 
 class Locales {
@@ -119,10 +151,11 @@ class Locales {
         'Change password successfully',
     'reset_password_dialog_change_password_not_successful':
         'Password change was not successful',
-    'home_page_pharmacy': 'pharmacy',
+    'home_page_drugs': 'Drugs',
+    'home_page_pharmacies': 'Pharmacys',
+    'home_page_shopping_cart': 'Shopping cart',
+    'home_page_pharmacy': 'Pharmacy',
     'profile_page_profile': 'profile',
-    'home_admin_page_drugs': 'Drugs',
-    'home_admin_page_pharmacies': 'Pharmacys',
     'drawer_exit': 'Exit',
     'pharmacies_page_not_available_pharmacies': 'No pharmacy has been defined',
     'detail_pharmacy_page_pharmacy_profile': 'Pharmacy profile',
@@ -157,6 +190,31 @@ class Locales {
         'The pharmacy could not be added successfully',
     'pharmacy_page_add_pharmacy': 'Add pharmacy',
     'pharmacy_page_edit_pharmacy': 'Edit Pharmacy',
+    'drugs_page_not_available_drugs': 'No drugs has been defined',
+    'drug_dialog_add_drug': 'Add drug',
+    'drug_dialog_edit_drug': 'Edit drug',
+    'drug_dialog_manufacturing_company_name': 'manufacturingCompanyName',
+    'drug_dialog_drug_name_empty': 'Enter the name of the drug',
+    'drug_dialog_manufacturing_company_name_empty':
+        'Enter the name of the manufacturer',
+    'drug_dialog_add_drug_failed': 'Addition of drug was not successful',
+    'drug_dialog_add_drug_successful': 'Drug added successfully',
+    'drug_dialog_change_drug_successful':
+        'Drug information has been successfully changed',
+    'drug_dialog_change_drug_failed':
+        'Changing drug information was not successful',
+    'drugs_management_drugs_management': 'Drugs Management',
+    'drugs_management_no_defined_drug_for_pharmacy':
+        'No drug has been defined for this pharmacy',
+    'drugs_management_show_drug': 'Display capability',
+    'add_drug_to_pharmacy_dialog_price': 'Price',
+    'add_drug_to_pharmacy_dialog_select_drug': 'Select the desired drug',
+    'add_drug_to_pharmacy_dialog_price_validate':
+        'The price must be greater than or equal to 1000',
+    'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_successful':
+        'The drug was successfully added to the pharmacy drugs',
+    'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_failed':
+        'Addition of drug to pharmacy drugs was not successful',
   };
   static const fa_IR = {
     'login_page_username': 'نام کاربری',
@@ -185,10 +243,11 @@ class Locales {
         'رمز عبور با موفقیت تغییر کرد',
     'reset_password_dialog_change_password_not_successful':
         'تغییر رمز عبور موفقیت آمیز نبود',
+    'home_page_drugs': 'داروها',
+    'home_page_pharmacies': 'داروخانه ها',
+    'home_page_shopping_cart': 'سبد خرید',
     'home_page_pharmacy': 'داروخانه',
     'profile_page_profile': 'پروفایل',
-    'home_admin_page_drugs': 'داروها',
-    'home_admin_page_pharmacies': 'داروخانه ها',
     'drawer_exit': 'خروج',
     'pharmacies_page_not_available_pharmacies':
         'هیچ داروخانه ای تعریف نشده است.',
@@ -219,5 +278,28 @@ class Locales {
     'pharmacy_page_add_pharmacy_failed': 'داروخانه با موفقیت اضافه نشد.',
     'pharmacy_page_add_pharmacy': 'افزودن داروخانه',
     'pharmacy_page_edit_pharmacy': 'ویرایش داروخانه',
+    'drugs_page_not_available_drugs': 'هیچ دارو ای تعریف نشده است.',
+    'drug_dialog_add_drug': 'اضافه کردن دارو',
+    'drug_dialog_edit_drug': 'ویرایش دارو',
+    'drug_dialog_manufacturing_company_name': 'نام شرکت سازنده',
+    'drug_dialog_drug_name_empty': 'نام دارو را وارد کنید.',
+    'drug_dialog_manufacturing_company_name_empty':
+        'نام شرکت سازنده را وارد کنید.',
+    'drug_dialog_add_drug_failed': 'اضافه کردن دارو موفقیت آمیز نبود.',
+    'drug_dialog_add_drug_successful': 'دارو با موفقیت اضافه شد.',
+    'drug_dialog_change_drug_successful': 'اطلاعات دارو با موفقیت تغییر کرد.',
+    'drug_dialog_change_drug_failed': 'تغییر اطلاعات دارو موفقیت آمیز نبود.',
+    'drugs_management_drugs_management': 'مدیریت داروها',
+    'drugs_management_no_defined_drug_for_pharmacy':
+        'برای این داروخانه هیچ دارویی تعریف نشده است.',
+    'drugs_management_show_drug': 'قابلیت نمایش',
+    'add_drug_to_pharmacy_dialog_price': 'قیمت',
+    'add_drug_to_pharmacy_dialog_select_drug': 'دارو مورد نظر را انتخاب کنید.',
+    'add_drug_to_pharmacy_dialog_price_validate':
+        'قیمت باید بزرگتر یا مساوی 1000 باشد.',
+    'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_successful':
+        'دارو با موفقیت به داروهای داروخانه اضافه شد.',
+    'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_failed':
+        'اضافه کردن دارو به داروهای داروخانه موفقیت آمیز نبود.',
   };
 }

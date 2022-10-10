@@ -1,9 +1,12 @@
+import '../../shared/models/drug_pharmacy_view_model.dart';
+
 class PharmacyInsertDto {
   final String name;
   final String address;
   final String doctorName;
   final String dateOfEstablishment;
   final String? base64Image;
+  final List<DrugPharmacyViewModel> drugs;
 
   PharmacyInsertDto({
     required this.name,
@@ -11,6 +14,7 @@ class PharmacyInsertDto {
     required this.doctorName,
     required this.dateOfEstablishment,
     this.base64Image,
+   required this.drugs ,
   });
 
   Map<String, dynamic> toJson() {
@@ -19,7 +23,8 @@ class PharmacyInsertDto {
       'address': address,
       'doctorName': doctorName,
       'dateOfEstablishment': dateOfEstablishment,
-      'base64Image': base64Image
+      'base64Image': base64Image,
+      'drugs':drugs.map((drugPharmacy) => drugPharmacy.toJson()).toList(),
     };
   }
 }

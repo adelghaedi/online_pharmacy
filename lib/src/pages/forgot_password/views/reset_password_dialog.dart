@@ -8,20 +8,30 @@ import '../../../infrastructure/utils/utils.dart' as utils;
 
 class ResetPasswordDialog extends GetView<ResetPasswordController> {
   final int userId;
+  final bool comeFromLoginPage;
 
-  const ResetPasswordDialog({super.key, required this.userId});
+  const ResetPasswordDialog({
+    super.key,
+    required this.userId,
+    this.comeFromLoginPage = false,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return _alertDialog(context);
+    return _alertDialog(context, comeFromLoginPage);
   }
 
-  Widget _alertDialog(BuildContext context) => AlertDialog(
-      title: Text(LocaleKeys.forgot_password_page_change_password.tr),
-      contentPadding: const EdgeInsets.all(utils.scaffoldPadding),
-      content: _form(context));
+  Widget _alertDialog(BuildContext context, final bool comeFromLoginPage) =>
+      AlertDialog(
+          title: Text(LocaleKeys.forgot_password_page_change_password.tr),
+          contentPadding: const EdgeInsets.all(utils.scaffoldPadding),
+          content: _form(context, comeFromLoginPage));
 
-  Widget _form(BuildContext context) => Form(
+  Widget _form(
+    BuildContext context,
+    final bool comeFromLoginPage,
+  ) =>
+      Form(
         key: controller.formKey,
         child: SingleChildScrollView(
           child: Column(
@@ -32,18 +42,23 @@ class ResetPasswordDialog extends GetView<ResetPasswordController> {
               utils.verticalSpacer20,
               _confirmPasswordTextField(),
               utils.verticalSpacer40,
-              _submitButton(context, userId),
+              _submitButton(context, userId, comeFromLoginPage),
             ],
           ),
         ),
       );
 
-  Widget _submitButton(final BuildContext context, final int userId) =>
+  Widget _submitButton(
+    final BuildContext context,
+    final int userId,
+    final bool comeFromLoginPage,
+  ) =>
       SizedBox(
         height: utils.elevatedButtonHeight,
         child: Obx(
           () => ElevatedButton(
-            onPressed: () => controller.onPressedSubmit(context, userId),
+            onPressed: () =>
+                controller.onPressedSubmit(context, userId, comeFromLoginPage),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

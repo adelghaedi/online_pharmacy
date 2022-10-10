@@ -1,12 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:toast/toast.dart';
 
 import '../../../../generated/locales.g.dart';
-import '../models/edit_password_dto.dart';
-import '../repositories/reset_password_repository.dart';
-import '../../shared/user_view_model.dart';
+import '../models/password_update_dto.dart';
+import '../repositories/forgot_password_repository.dart';
+import '../../shared/models/user_view_model.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../../infrastructure/routes/pharmacy_module_routes.dart';
 
@@ -23,29 +24,46 @@ class ResetPasswordController extends GetxController {
 
   final RxBool isLoading = false.obs;
 
-  final ResetPasswordRepository _repository = ResetPasswordRepository();
+  final ForgotPasswordRepository _repository = ForgotPasswordRepository();
 
-  void onPressedSubmit(final BuildContext context, final int id) async {
+  final GetStorage _storage = GetStorage();
+
+  void onPressedSubmit(
+    final BuildContext context,
+    final int id,
+    final bool comeFromLoginPage,
+  ) async {
     ToastContext().init(context);
 
     if (formKey.currentState!.validate()) {
       isLoading.value = true;
 
-      final Either<String, UserViewModel> result = await _repository
-          .changeUserPassword(id, EditPasswordDto(newPasswordController.text));
+      final Either<String, UserViewModel> result =
+          await _repository.changeUserPassword(
+              id, PasswordUpdateDto(newPasswordController.text));
 
       result.fold(
         _changePasswordException,
-        _changePasswordSuccessful,
+        (final UserViewModel user) => _changePasswordSuccessful(
+          user,
+          comeFromLoginPage,
+        ),
       );
     }
   }
 
-  void _changePasswordSuccessful(final UserViewModel user) {
+  void _changePasswordSuccessful(
+      final UserViewModel user, final bool comeFromLoginPage) {
     isLoading.value = false;
     utils.customToast(
         msg: LocaleKeys.reset_password_dialog_change_password_successfully.tr);
-    Get.offAllNamed(PharmacyModuleRoutes.loginPage);
+    if (comeFromLoginPage) {
+      Get.offAllNamed(PharmacyModuleRoutes.loginPage);
+    } else {
+      _storage.remove('password');
+      _storage.write('password', user.password);
+      Get.back();
+    }
   }
 
   void _changePasswordException(final String exception) {

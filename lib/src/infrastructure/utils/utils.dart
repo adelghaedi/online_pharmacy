@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toast/toast.dart';
 
+
 import '../../../generated/locales.g.dart';
 
+
 const String packageName = 'pharmacy';
-const String splashImageUrl = 'lib/assets/images/splash_image.png';
-const String personImageUrl = 'lib/assets/images/person.png';
+const String drugImageUrl = 'lib/assets/images/drug.png';
 const String pharmacyImageUrl = 'lib/assets/images/pharmacy.png';
 const double scaffoldPadding = 12.0;
 const String userNameHint = 'adelghaedi';
@@ -18,12 +19,20 @@ const String mobileHint = '09334220275';
 const String firstNameHint = 'Adel';
 const String lastNameHint = 'Ghaedi';
 const String birthDateHint = '1383/01/01';
+const String drugNameHint = 'استامینوفن';
+const String drugManufacturingCompanyNameHint = 'شرکت داروسازی تهران';
+
+const int timeOut = 2000;
 
 const String baseUrlApi = 'http://10.0.2.2:3000';
 
 const String endPointUrlApiUsers = '/Users';
 
 const String endPointUrlApiPharmacies = '/Pharmacies';
+
+const String endPointUrlApiDrugs = '/Drugs';
+
+const String endPointUrlApiDrugsPharmacy = '/DrugsPharmacy';
 
 const double elevatedButtonHeight = 45.0;
 
@@ -113,13 +122,6 @@ Widget editInfoButton(final VoidCallback onPressed) => SizedBox(
         ),
       ),
     );
-
-ImageProvider convertBase64ToImage(final String base64Image) {
-  MemoryImage image = MemoryImage(
-    base64.decode(base64Image),
-  );
-  return image;
-}
 
 String convertImageToBase64(final String imageUrl) {
   List<int> imageBytes = File(imageUrl).readAsBytesSync();

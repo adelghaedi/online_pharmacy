@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toast/toast.dart';
 
+import '../../shared/models/pharmacy_view_model.dart';
 import '../models/pharmacy_update_dto.dart';
-import '../models/pharmacy_view_model.dart';
 import '../controllers/pharmacy_base_controller.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../../../generated/locales.g.dart';
+import '../../shared/models/drug_pharmacy_view_model.dart';
 
 class EditPharmacyController extends PharmacyBaseController {
   final Map<String, dynamic> pharmacyInfo = Get.arguments;
@@ -47,6 +48,11 @@ class EditPharmacyController extends PharmacyBaseController {
         doctorName: doctorNameController.text,
         dateOfEstablishment: dateOfEstablishmentController.text,
         base64Image: selectedImageUrl.value,
+        drugs: (pharmacyInfo['drugs'] as List<dynamic>)
+            .map(
+              (json) => DrugPharmacyViewModel.fromJson(json),
+            )
+            .toList(),
       );
 
       final Either<String, PharmacyViewModel> result =

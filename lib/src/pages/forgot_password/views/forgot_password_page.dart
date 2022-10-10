@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../../../generated/locales.g.dart';
 import '../controllers/forgot_password_controller.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
+import '../../../components/customScaffold/views/custom_scaffold.dart';
 
 class ForgotPasswordPage extends GetView<ForgotPasswordController> {
   const ForgotPasswordPage({super.key});
@@ -13,20 +14,23 @@ class ForgotPasswordPage extends GetView<ForgotPasswordController> {
   Widget build(BuildContext context) {
     return Obx(
       () => Stack(children: [
-        Scaffold(
-          appBar: _appBar(),
-          body: _body(context),
-        ),
+        _scaffold(context),
         if (controller.isLoading.value) utils.customProgressBar(),
       ]),
     );
   }
 
+  Widget _scaffold(BuildContext context) => CustomScaffold(
+        body: _body(context),
+        wantDrawer: false,
+        wantFloatActionButton: false,
+        titleAppBar: LocaleKeys.login_page_forgot_password.tr,
+      );
+
   Widget _body(BuildContext context) => Padding(
         padding: const EdgeInsets.all(utils.scaffoldPadding),
         child: _form(context),
       );
-
 
   Widget _form(BuildContext context) => Form(
         key: controller.formKey,
@@ -50,20 +54,6 @@ class ForgotPasswordPage extends GetView<ForgotPasswordController> {
           child: Text(
             LocaleKeys.forgot_password_page_continue.tr,
           ),
-        ),
-      );
-
-  AppBar _appBar() => AppBar(
-        leading: _backIcon(),
-        title: Text(
-          LocaleKeys.login_page_forgot_password.tr,
-        ),
-      );
-
-  Widget _backIcon() => GestureDetector(
-        onTap: controller.onTapBackIcon,
-        child: const Icon(
-          Icons.chevron_left,
         ),
       );
 

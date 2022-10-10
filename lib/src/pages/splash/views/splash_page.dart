@@ -4,11 +4,11 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:toast/toast.dart';
 
-import '../../shared/user_view_model.dart';
+import '../../shared/models/user_view_model.dart';
 import '../../../../generated/locales.g.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../../infrastructure/routes/pharmacy_module_routes.dart';
-import '../../shared/repository.dart';
+import '../repositories/splash_repository.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -19,7 +19,7 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   final GetStorage _getStorage = GetStorage();
-  final Repository _repository = Repository();
+  final SplashRepository _repository = SplashRepository();
 
   bool isLoading = true;
 
@@ -69,7 +69,7 @@ class _SplashPageState extends State<SplashPage> {
             child: Image.asset(
               width: 200,
               height: 200,
-              utils.splashImageUrl,
+              utils.drugImageUrl,
               package: utils.packageName,
               fit: BoxFit.cover,
             ),
@@ -94,7 +94,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   Future<void> _userLoggedInSuccessful(final UserViewModel user) async {
-    await Get.offAndToNamed(PharmacyModuleRoutes.homePage);
+    await Get.offAndToNamed(PharmacyModuleRoutes.homeUserPage);
   }
 
   Future<void> _existsAdminException(final String exception) async {
@@ -102,7 +102,9 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   Future<void> _existsAdminSuccessful(final UserViewModel user) async {
-    notHaveAdmin = false;
+    setState(() {
+      notHaveAdmin = false;
+    });
 
     await _checkUserLoggedIn();
 

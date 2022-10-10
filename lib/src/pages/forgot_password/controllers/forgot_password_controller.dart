@@ -1,14 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pharmacy/src/pages/forgot_password/controllers/reset_password_controller.dart';
-import 'package:pharmacy/src/pages/forgot_password/views/reset_password_dialog.dart';
 import 'package:toast/toast.dart';
 
 import '../../../../generated/locales.g.dart';
 import '../repositories/forgot_password_repository.dart';
-import '../../shared/user_view_model.dart';
+import '../../shared/models/user_view_model.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
+import '../views/reset_password_dialog.dart';
+import '../controllers/reset_password_controller.dart';
 
 class ForgotPasswordController extends GetxController {
   final GlobalKey<FormState> formKey = GlobalKey();
@@ -34,10 +34,6 @@ class ForgotPasswordController extends GetxController {
     return LocaleKeys.user_page_invalid_mobile.tr;
   }
 
-  void onTapBackIcon() {
-    Get.back();
-  }
-
   void onPressedContinueButton(final BuildContext context) async {
     ToastContext().init(context);
     if (formKey.currentState!.validate()) {
@@ -59,6 +55,7 @@ class ForgotPasswordController extends GetxController {
       barrierDismissible: false,
       ResetPasswordDialog(
         userId: user.id,
+        comeFromLoginPage: true,
       ),
     );
   }

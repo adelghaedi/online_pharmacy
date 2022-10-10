@@ -5,7 +5,7 @@ import 'package:toast/toast.dart';
 
 import '../../../../generated/locales.g.dart';
 import '../../../infrastructure/routes/pharmacy_module_routes.dart';
-import '../../shared/user_view_model.dart';
+import '../../shared/models/user_view_model.dart';
 import '../models/insert_user_dto.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import 'user_base_controller.dart';

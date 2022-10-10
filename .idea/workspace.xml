@@ -29,12 +29,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/lib/src/pages/forgot_password/views/reset_password_dialog.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/pages/forgot_password/controllers/reset_password_controller.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/pages/forgot_password/controllers/forgot_password_controller.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/infrastructure/utils/utils.dart" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/src/pages/forgot_password/models/edit_password_dto.dart" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/src/pages/forgot_password/repositories/reset_password_repository.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/pages/forgot_password/models/password_update_dto.dart" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2FFdFW0tVs5Eaktma80YJxrn9Qf" />
   <component name="ProjectView">
@@ -77,11 +75,11 @@
       <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\login\commons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\components\customScaffold\views" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\shared" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\pharmacies\models" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\shared\models" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\profile\controllers" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\splash\views" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\splash\repositories" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\drugs\repositories" />
     </key>
   </component>
   <component name="RunManager">

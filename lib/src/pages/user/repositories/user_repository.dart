@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 
 import '../models/edit_user_dto.dart';
 import '../models/insert_user_dto.dart';
-import '../../shared/user_view_model.dart';
+import '../../shared/models/user_view_model.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 
 class UserRepository {

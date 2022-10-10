@@ -7,8 +7,8 @@ import 'package:get_storage/get_storage.dart';
 
 import '../../../../generated/locales.g.dart';
 import '../../../../pharmacy.dart';
-import '../../shared/user_view_model.dart';
-import '../../shared/repository.dart';
+import '../../shared/models/user_view_model.dart';
+import '../repositories/login_repository.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 
 class LoginController extends GetxController {
@@ -20,7 +20,7 @@ class LoginController extends GetxController {
 
   final GlobalKey<FormState> formKey = GlobalKey();
 
-  final Repository _repository = Repository();
+  final LoginRepository _repository = LoginRepository();
 
   final GetStorage _getStorage = GetStorage();
 
@@ -84,7 +84,7 @@ class LoginController extends GetxController {
         msg: LocaleKeys.login_page_login_successful.tr,
       );
 
-      Get.offAndToNamed(PharmacyModuleRoutes.homePage);
+      Get.offAndToNamed(PharmacyModuleRoutes.homeUserPage);
     }
   }
 

@@ -1,13 +1,29 @@
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
+import '../../pages/pharmacy_drug_management/views/pharmacy_drug_management_page.dart';
+import '../../pages/pharmacy_drug_management/commons/pharmacy_drug_management_binding.dart';
+import '../../pages/drugs/views/drugs_user_page.dart';
+import '../../pages/drugs/commons/drugs_user_binding.dart';
+import '../../pages/drugs/views/drugs_admin_page.dart';
+import '../../pages/pharmacies/commons/pharmacies_admin_binding.dart';
+import '../../pages/pharmacies/commons/pharmacies_user_binding.dart';
+import '../../pages/pharmacies/views/pharmacies_admin_page.dart';
+import '../../pages/pharmacies/views/pharmacies_user_page.dart';
+import '../../pages/profile/controllers/profile_admin_controller.dart';
+import '../../pages/profile/controllers/profile_user_controller.dart';
+import '../../pages/profile/commons/profile_user_binding.dart';
+import '../../pages/home/commons/home_user_binding.dart';
+import '../../pages/home/controllers/home_user_controller.dart';
+import '../../pages/home/controllers/home_admin_controller.dart';
+import '../../pages/drugs/commons/drugs_admin_binding.dart';
 import '../../pages/user/controllers/add_user_controller.dart';
 import '../../pages/user/controllers/edit_user_controller.dart';
 import '../../pages/pharmacies/commons/edit_pharmacy_binding.dart';
 import '../../pages/pharmacies/commons/detail_pharmacy_binding.dart';
 import '../../pages/pharmacies/views/detail_pharmacy_page.dart';
 import '../../pages/home/commons/home_admin_binding.dart';
-import '../../pages/home/views/home_admin_page.dart';
+import '../../pages/home/views/home_page.dart';
 import '../../../pharmacy.dart';
 import '../../pages/user/commons/add_admin_binding.dart';
 import '../../pages/user/commons/add_user_binding.dart';
@@ -16,16 +32,12 @@ import '../../pages/user/views/user_page.dart';
 import '../routes/pharmacy_module_routes.dart';
 import '../../pages/forgot_password/views/forgot_password_page.dart';
 import '../../pages/forgot_password/commons/forgot_password_binding.dart';
-import '../../pages/home/commons/home_binding.dart';
-import '../../pages/home/views/home_page.dart';
 import '../../pages/splash/views/splash_page.dart';
 import '../../pages/login/commons/login_binding.dart';
 import '../../pages/login/views/login_page.dart';
-import '../../pages/pharmacies/views/pharmacies_page.dart';
-import '../../pages/pharmacies/commons/pharmacies_binding.dart';
 import '../../pages/pharmacies/commons/add_pharmacy_binding.dart';
 import '../../pages/pharmacies/views/pharmacy_page.dart';
-import '../../pages/profile/commons/profile_binding.dart';
+import '../../pages/profile/commons/profile_admin_binding.dart';
 import '../../pages/profile/views/profile_page.dart';
 import '../../pages/pharmacies/controllers/add_pharmacy_controller.dart';
 import '../../pages/pharmacies/controllers/edit_pharmacy_controller.dart';
@@ -45,11 +57,6 @@ List<GetPage> pages = [
     name: PharmacyModuleRoutes.forgotPasswordPage,
     page: ForgotPasswordPage.new,
     binding: ForgotPasswordBinding(),
-  ),
-  GetPage(
-    name: PharmacyModuleRoutes.homePage,
-    page: HomePage.new,
-    binding: HomeBinding(),
   ),
   GetPage(
     name: PharmacyModuleRoutes.addUserPage,
@@ -73,13 +80,18 @@ List<GetPage> pages = [
   ),
   GetPage(
     name: PharmacyModuleRoutes.homeAdminPage,
-    page: HomeAdminPage.new,
+    page: HomePage<HomeAdminController>.new,
     binding: HomeAdminBinding(),
   ),
   GetPage(
     name: PharmacyModuleRoutes.pharmaciesAdminPage,
-    page: PharmaciesPage.new,
-    binding: PharmaciesBinding(),
+    page: PharmaciesAdminPage.new,
+    binding: PharmaciesAdminBinding(),
+  ),
+  GetPage(
+    name: PharmacyModuleRoutes.pharmaciesUserPage,
+    page: PharmaciesUserPage.new,
+    binding: PharmaciesUserBinding(),
   ),
   GetPage(
     name: PharmacyModuleRoutes.addPharmacyAdminPage,
@@ -98,7 +110,32 @@ List<GetPage> pages = [
   ),
   GetPage(
     name: PharmacyModuleRoutes.profileAdminPage,
-    page: ProfilePage.new,
-    binding: ProfileBinding(),
+    page: ProfilePage<ProfileAdminController>.new,
+    binding: ProfileAdminBinding(),
+  ),
+  GetPage(
+    name: PharmacyModuleRoutes.profileUserPage,
+    page: ProfilePage<ProfileUserController>.new,
+    binding: ProfileUserBinding(),
+  ),
+  GetPage(
+    name: PharmacyModuleRoutes.drugsAdminPage,
+    page: DrugsAdminPage.new,
+    binding: DrugsAdminBinding(),
+  ),
+  GetPage(
+    name: PharmacyModuleRoutes.drugsUserPage,
+    page: DrugsUserPage.new,
+    binding: DrugsUserBinding(),
+  ),
+  GetPage(
+    name: PharmacyModuleRoutes.homeUserPage,
+    page: HomePage<HomeUserController>.new,
+    binding: HomeUserBinding(),
+  ),
+  GetPage(
+    name: PharmacyModuleRoutes.pharmacyDrugManagementPage,
+    page: PharmacyDrugManagementPage.new,
+    binding: PharmacyDrugManagementBinding(),
   ),
 ];

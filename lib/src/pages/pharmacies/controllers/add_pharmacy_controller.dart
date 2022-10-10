@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:toast/toast.dart';
 
 import '../models/pharmacy_insert_dto.dart';
-import '../models/pharmacy_view_model.dart';
+import '../../shared/models/pharmacy_view_model.dart';
 import '../controllers/pharmacy_base_controller.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../../../generated/locales.g.dart';
@@ -23,12 +23,12 @@ class AddPharmacyController extends PharmacyBaseController {
       isLoading.value = true;
 
       final PharmacyInsertDto dto = PharmacyInsertDto(
-        name: pharmacyNameController.text,
-        address: addressController.text,
-        doctorName: doctorNameController.text,
-        dateOfEstablishment: dateOfEstablishmentController.text,
-        base64Image: selectedImageUrl.value,
-      );
+          name: pharmacyNameController.text,
+          address: addressController.text,
+          doctorName: doctorNameController.text,
+          dateOfEstablishment: dateOfEstablishmentController.text,
+          base64Image: selectedImageUrl.value,
+          drugs: []);
 
       final Either<String, PharmacyViewModel> result =
           await repository.insertPharmacy(dto);

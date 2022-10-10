@@ -2,13 +2,16 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 import '../models/pharmacy_update_dto.dart';
-import '../models/pharmacy_view_model.dart';
+import '../../shared/models/pharmacy_view_model.dart';
 import '../models/pharmacy_insert_dto.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 
 class PharmaciesRepository {
   final Dio _dio = Dio(BaseOptions(
     baseUrl: utils.baseUrlApi,
+    connectTimeout: utils.timeOut,
+    sendTimeout: utils.timeOut,
+    receiveTimeout: utils.timeOut,
   ));
 
   Future<Either<String, List<PharmacyViewModel>>> getPharmaciesInfo() async {
@@ -49,7 +52,7 @@ class PharmaciesRepository {
     }
   }
 
-  Future<Either<String, dynamic>> deletePharmacyWithId(final int id) async {
+  Future<Either<String, dynamic>> removePharmacyWithId(final int id) async {
     try {
       final Response result = await _dio.delete(
         '${utils.endPointUrlApiPharmacies}/$id',

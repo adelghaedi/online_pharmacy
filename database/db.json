@@ -8,7 +8,7 @@
       "userName": "sajadamiri",
       "password": "123456#",
       "isAdmin": true,
-      "base64Image":null,
+      "base64Image": null,
       "id": 1
     },
     {
@@ -26,11 +26,26 @@
   "Pharmacies": [
     {
       "name": "نرجس",
-      "address": "والفجر",
-      "doctorName": "رضا محمدی",
-      "dateOfEstablishment": "1389/10/10",
-      "base64Image":null,
+      "address": "",
+      "doctorName": "محمدی",
+      "dateOfEstablishment": "1398/10/10",
+      "base64Image": null,
+      "drugs": [],
       "id": 1
+    }
+  ],
+  "Drugs": [
+    {
+      "id": 1,
+      "name": "استامینوفن",
+      "manufacturingCompanyName": "شرکت داروسازان شیراز",
+      "base64Image": null
+    },
+    {
+      "name": "سرماخوردگی",
+      "manufacturingCompanyName": "شرکت داروسازان تهران",
+      "base64Image": null,
+      "id": 2
     }
   ]
 }

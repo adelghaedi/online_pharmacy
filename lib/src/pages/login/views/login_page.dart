@@ -27,7 +27,7 @@ class LoginPage extends GetView<LoginController> {
         wantFloatActionButton: false,
         wantDrawer: false,
         body: _form(context),
-        isHomeAdminPage: true,
+        isLoginPage: true,
       );
 
   Widget _form(final BuildContext context) => Padding(

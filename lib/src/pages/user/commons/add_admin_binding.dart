@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+
 import '../controllers/add_user_controller.dart';
 
 class AddAdminBinding extends Bindings {

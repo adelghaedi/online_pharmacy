@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../controllers/custom_scaffold_controller.dart';
-import '../../../../generated/locales.g.dart';
 import '../../../pages/shared/circle_image.dart';
+import '../../../../generated/locales.g.dart';
 
 class CustomScaffold extends GetView<CustomScaffoldController> {
   final Widget body;
@@ -13,7 +13,7 @@ class CustomScaffold extends GetView<CustomScaffoldController> {
   final String titleAppBar;
   final VoidCallback? onPressedFloatActionButton;
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-  final bool isHomeAdminPage;
+  final bool isHomeUserPage;
   final bool isLoginPage;
 
   CustomScaffold({
@@ -23,7 +23,7 @@ class CustomScaffold extends GetView<CustomScaffoldController> {
     required this.wantFloatActionButton,
     required this.titleAppBar,
     this.onPressedFloatActionButton,
-    this.isHomeAdminPage = false,
+    this.isHomeUserPage = false,
     this.isLoginPage = false,
   });
 
@@ -55,7 +55,7 @@ class CustomScaffold extends GetView<CustomScaffoldController> {
       );
 
   Widget _backIcon() => GestureDetector(
-        onTap: () => controller.onTapBackIcon(isHomeAdminPage, isLoginPage),
+        onTap: () => controller.onTapBackIcon(isHomeUserPage, isLoginPage),
         child: const Icon(
           Icons.chevron_left,
         ),
@@ -94,22 +94,26 @@ class CustomScaffold extends GetView<CustomScaffoldController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  CustomScaffoldController.firstNameUser.value,
-                  style: const TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                _firstName(),
                 utils.verticalSpacer5,
-                Text(
-                  CustomScaffoldController.mobileUser.value,
-                  style: const TextStyle(fontSize: 16),
-                ),
+                _mobile(),
               ],
             ),
           ),
         ],
+      );
+
+  Widget _mobile() => Text(
+        CustomScaffoldController.userProfile.value?.mobile ?? '',
+        style: const TextStyle(fontSize: 16),
+      );
+
+  Widget _firstName() => Text(
+        CustomScaffoldController.userProfile.value?.firstName ?? '',
+        style: const TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+        ),
       );
 
   Widget _drawerIcon() => wantDrawer
@@ -151,7 +155,7 @@ class CustomScaffold extends GetView<CustomScaffoldController> {
   Widget _drugsTextButton() => TextButton(
         onPressed: controller.onPressedDrugs,
         child: Text(
-          LocaleKeys.home_admin_page_drugs.tr,
+          LocaleKeys.home_page_drugs.tr,
           style: const TextStyle(fontSize: 20),
         ),
       );
@@ -159,13 +163,12 @@ class CustomScaffold extends GetView<CustomScaffoldController> {
   TextButton _pharmaciesTextButton() => TextButton(
         onPressed: controller.onPressedPharmacies,
         child: Text(
-          LocaleKeys.home_admin_page_pharmacies.tr,
+          LocaleKeys.home_page_pharmacies.tr,
           style: const TextStyle(fontSize: 20),
         ),
       );
 
   Widget _circleImage() => CircleImage(
-        imageAssetsUrl: utils.personImageUrl,
-        base64Image: CustomScaffoldController.base64ImageUser.value,
+        base64Image: CustomScaffoldController.userProfile.value?.base64Image,
       );
 }

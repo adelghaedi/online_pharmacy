@@ -31,14 +31,13 @@
     "change_password_not_successful": "تغییر رمز عبور موفقیت آمیز نبود"
   },
   "home_page": {
+    "drugs": "داروها",
+    "pharmacies": "داروخانه ها",
+    "shopping_cart": "سبد خرید",
     "pharmacy": "داروخانه"
   },
   "profile_page": {
     "profile": "پروفایل"
-  },
-  "home_admin_page": {
-    "drugs": "داروها",
-    "pharmacies": "داروخانه ها"
   },
   "drawer": {
     "exit": "خروج"
@@ -78,5 +77,31 @@
     "add_pharmacy_failed": "داروخانه با موفقیت اضافه نشد.",
     "add_pharmacy": "افزودن داروخانه",
     "edit_pharmacy": "ویرایش داروخانه"
+  },
+  "drugs_page": {
+    "not_available_drugs": "هیچ دارو ای تعریف نشده است."
+  },
+  "drug_dialog": {
+    "add_drug": "اضافه کردن دارو",
+    "edit_drug": "ویرایش دارو",
+    "manufacturing_company_name": "نام شرکت سازنده",
+    "drug_name_empty": "نام دارو را وارد کنید.",
+    "manufacturing_company_name_empty": "نام شرکت سازنده را وارد کنید.",
+    "add_drug_failed": "اضافه کردن دارو موفقیت آمیز نبود.",
+    "add_drug_successful": "دارو با موفقیت اضافه شد.",
+    "change_drug_successful": "اطلاعات دارو با موفقیت تغییر کرد.",
+    "change_drug_failed": "تغییر اطلاعات دارو موفقیت آمیز نبود."
+  },
+  "drugs_management": {
+    "drugs_management": "مدیریت داروها",
+    "no_defined_drug_for_pharmacy": "برای این داروخانه هیچ دارویی تعریف نشده است.",
+    "show_drug": "قابلیت نمایش"
+  },
+  "add_drug_to_pharmacy_dialog": {
+    "price": "قیمت",
+    "select_drug": "دارو مورد نظر را انتخاب کنید.",
+    "price_validate": "قیمت باید بزرگتر یا مساوی 1000 باشد.",
+    "add_drug_to_pharmacy_successful": "دارو با موفقیت به داروهای داروخانه اضافه شد.",
+    "add_drug_to_pharmacy_failed": "اضافه کردن دارو به داروهای داروخانه موفقیت آمیز نبود."
   }
 }

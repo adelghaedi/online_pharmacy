@@ -67,7 +67,6 @@ class UserPage<T extends UserBaseController> extends GetView<T> {
         () => GestureDetector(
           onTap: controller.onTapCircleImage,
           child: CircleImage(
-            imageAssetsUrl: utils.personImageUrl,
             backgroundColor: Colors.teal,
             imageSize: 80,
             base64Image: controller.selectedImageUrl.value,

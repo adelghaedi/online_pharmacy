@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:toast/toast.dart';
 
 import 'user_base_controller.dart';
-import '../../shared/user_view_model.dart';
+import '../../shared/models/user_view_model.dart';
 import '../models/edit_user_dto.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../../../generated/locales.g.dart';
