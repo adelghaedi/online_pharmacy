@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+import '../../../components/custom_scaffold/controllers/custom_scaffold_controller.dart';
 import '../controllers/login_controller.dart';
 import '../../../../generated/locales.g.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
-import '../../../components/customScaffold/views/custom_scaffold.dart';
+import '../../../components/custom_scaffold/views/custom_scaffold.dart';
 
 class LoginPage extends GetView<LoginController> {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.lazyPut(CustomScaffoldController.new);
     return Obx(
       () => Stack(
         children: [
@@ -24,7 +26,7 @@ class LoginPage extends GetView<LoginController> {
 
   Widget _scaffold(BuildContext context) => CustomScaffold(
         titleAppBar: LocaleKeys.login_page_login.tr,
-        wantFloatActionButton: false,
+        wantFloatingActionButton: false,
         wantDrawer: false,
         body: _form(context),
         isLoginPage: true,
@@ -76,7 +78,7 @@ class LoginPage extends GetView<LoginController> {
 
   Widget _loginButton(final BuildContext context) => SizedBox(
         width: double.infinity,
-        height: utils.elevatedButtonHeight,
+        height: utils.buttonHeight,
         child: ElevatedButton(
           onPressed: () => controller.onPressedLogin(context),
           child: Text(

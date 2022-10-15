@@ -18,4 +18,9 @@ class PharmacyModuleRoutes {
   static const String drugsAdminPage = '/drugs-admin';
   static const String drugsUserPage = '/drugs-user';
   static const String pharmacyDrugManagementPage = '/drugs-management';
+  static const String drugPurchasePage = '/drug-purchase';
+  static const String drugPurchaseDetailsPage = '/drug-purchase-details';
+  static const String pharmaciesWithDrugSelectedPage =
+      '/pharmacies-with-drug-selected';
+  static const String shoppingCartPage = '/shopping-cart';
 }

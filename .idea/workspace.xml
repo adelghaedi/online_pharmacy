@@ -62,24 +62,24 @@
     <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/src/pages/pharmacies/user_pharmacies" />
     <property name="settings.editor.selected.configurable" value="preferences.startup.tasks" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\pharmacies\user_pharmacies" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\drugs\admin_drugs" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\assets\images" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\assets\fonts" />
       <recent name="D:\TaavSys\final-project\pharmacy\lib\src\infrastructure" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\assets\i18n" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\login\commons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\pharmacies\models" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\shared\models" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\splash\views" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\splash\repositories" />
-      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\drugs\repositories" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\pharmacies\admin_pharmacies\commons" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\pharmacies\admin_pharmacies\repositories" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\pharmacies\user_pharmacies\views" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\drugs\admin_drugs\repositories" />
+      <recent name="D:\TaavSys\final-project\pharmacy\lib\src\pages\drugs\admin_drugs\controllers" />
     </key>
   </component>
   <component name="RunManager">

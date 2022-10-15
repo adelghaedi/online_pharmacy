@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../../../../generated/locales.g.dart';
 import '../controllers/forgot_password_controller.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
-import '../../../components/customScaffold/views/custom_scaffold.dart';
+import '../../../components/custom_scaffold/views/custom_scaffold.dart';
 
 class ForgotPasswordPage extends GetView<ForgotPasswordController> {
   const ForgotPasswordPage({super.key});
@@ -23,7 +23,7 @@ class ForgotPasswordPage extends GetView<ForgotPasswordController> {
   Widget _scaffold(BuildContext context) => CustomScaffold(
         body: _body(context),
         wantDrawer: false,
-        wantFloatActionButton: false,
+        wantFloatingActionButton: false,
         titleAppBar: LocaleKeys.login_page_forgot_password.tr,
       );
 
@@ -48,7 +48,7 @@ class ForgotPasswordPage extends GetView<ForgotPasswordController> {
       );
 
   Widget _continueButton(final BuildContext context) => SizedBox(
-        height: utils.elevatedButtonHeight,
+        height: utils.buttonHeight,
         child: ElevatedButton(
           onPressed: () => controller.onPressedContinueButton(context),
           child: Text(

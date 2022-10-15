@@ -5,13 +5,13 @@ import '../../shared/models/pharmacy_view_model.dart';
 import '../models/pharmacy_drugs_update_dto.dart';
 import '../views/add_drug_to_pharmacy_dialog.dart';
 import '../controllers/add_drug_to_pharmacy_controller.dart';
-import '../../shared/models/drug_pharmacy_view_model.dart';
+import '../../shared/models/pharmacy_drug_view_model.dart';
 import '../repositories/pharmacy_drug_management_repository.dart';
 
 class PharmacyDrugsManagementController extends GetxController {
   final int _pharmacyId = Get.arguments;
 
-  final RxList<DrugPharmacyViewModel> pharmacyDrugList = RxList();
+  final RxList<PharmacyDrugViewModel> pharmacyDrugList = RxList();
 
   final RxList<bool> showDrugSwitchesValue = RxList();
 
@@ -42,14 +42,14 @@ class PharmacyDrugsManagementController extends GetxController {
 
     showDrugSwitchesValue.value = List.generate(
       pharmacyDrugList.length,
-      (index) => pharmacyDrugList[index].showDrugPharmacy,
+      (index) => pharmacyDrugList[index].showPharmacyDrug,
     );
   }
 
   Future<void> _getPharmacyException(final String exception) async {}
 
   void onChangedShowDrugSwitch(final bool value, final int index) async {
-    pharmacyDrugList[index].showDrugPharmacy = value;
+    pharmacyDrugList[index].showPharmacyDrug = value;
 
     final Either<String, PharmacyViewModel> result =
         await _repository.pharmacyDrugsUpdate(
@@ -93,11 +93,11 @@ class PharmacyDrugsManagementController extends GetxController {
     );
 
     if (result != null) {
-      final DrugPharmacyViewModel drugPharmacy =
-          result as DrugPharmacyViewModel;
+      final PharmacyDrugViewModel drugPharmacy =
+          result as PharmacyDrugViewModel;
 
       pharmacyDrugList.add(drugPharmacy);
-      showDrugSwitchesValue.add(drugPharmacy.showDrugPharmacy);
+      showDrugSwitchesValue.add(drugPharmacy.showPharmacyDrug);
     }
   }
 }

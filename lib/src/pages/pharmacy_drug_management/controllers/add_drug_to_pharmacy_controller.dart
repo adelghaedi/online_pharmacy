@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:toast/toast.dart';
 
 import '../models/pharmacy_drugs_update_dto.dart';
-import '../../shared/models/drug_pharmacy_view_model.dart';
+import '../../shared/models/pharmacy_drug_view_model.dart';
 import '../../shared/models/pharmacy_view_model.dart';
 import '../../../../generated/locales.g.dart';
 import '../../shared/models/drug_view_model.dart';
@@ -57,15 +57,17 @@ class AddDrugToPharmacyController extends GetxController {
     if (formKey.currentState!.validate()) {
       isSubmitInfo.value = true;
 
-      final DrugPharmacyViewModel selectedDrug = DrugPharmacyViewModel(
-          drug: drugList.firstWhere(
-              (element) => element.id == valueDrugsDropDownButton.value),
-          price: priceController.text);
+      final PharmacyDrugViewModel selectedDrug = PharmacyDrugViewModel(
+        drug: drugList.firstWhere(
+            (element) => element.id == valueDrugsDropDownButton.value),
+        price: priceController.text,
+        showPharmacyDrug: true,
+      );
 
-      final List<DrugPharmacyViewModel> drugs =
+      final List<PharmacyDrugViewModel> drugs =
           (Get.arguments[0]['drugs'] as List<Map<String, dynamic>>)
               .map(
-                (json) => DrugPharmacyViewModel.fromJson(json),
+                (json) => PharmacyDrugViewModel.fromJson(json),
               )
               .toList();
 
@@ -98,7 +100,8 @@ class AddDrugToPharmacyController extends GetxController {
   }
 
   Future<void> _pharmacyDrugsUpdateSuccessful(
-      final DrugPharmacyViewModel drugPharmacy) async {
+    final PharmacyDrugViewModel drugPharmacy,
+  ) async {
     isSubmitInfo.value = false;
 
     utils.customToast(

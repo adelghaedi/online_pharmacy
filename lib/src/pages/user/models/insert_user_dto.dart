@@ -1,7 +1,10 @@
+import '../../shared/models/user_drug_view_model.dart';
+
 class InsertUserDto {
   final String firstName, lastName, mobile, birthDate, userName, password;
   final bool isAdmin;
   final String? base64Image;
+  List<UserDrugViewModel> drugs;
 
   InsertUserDto({
     required this.firstName,
@@ -12,6 +15,7 @@ class InsertUserDto {
     required this.password,
     required this.isAdmin,
     this.base64Image,
+    required this.drugs,
   });
 
   Map<String, dynamic> toJson() {
@@ -24,6 +28,11 @@ class InsertUserDto {
       'password': password,
       'isAdmin': isAdmin,
       'base64Image': base64Image,
+      'drugs': drugs
+          .map(
+            (drug) => drug.toJson(),
+          )
+          .toList(),
     };
   }
 }

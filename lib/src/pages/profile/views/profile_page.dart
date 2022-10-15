@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../../../generated/locales.g.dart';
 import '../controllers/profile_base_controller.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
-import '../../../components/customScaffold/views/custom_scaffold.dart';
+import '../../../components/custom_scaffold/views/custom_scaffold.dart';
 import '../../shared/circle_image.dart';
 
 class ProfilePage<T extends ProfileBaseController> extends GetView<T> {
@@ -23,31 +23,29 @@ class ProfilePage<T extends ProfileBaseController> extends GetView<T> {
   Widget _scaffold() => CustomScaffold(
         body: _body(),
         wantDrawer: true,
-        wantFloatActionButton: false,
+        wantFloatingActionButton: false,
         titleAppBar: LocaleKeys.profile_page_profile.tr,
       );
 
-  Widget _body() => Padding(
-        padding: const EdgeInsets.all(utils.scaffoldPadding),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              _circleImage(),
-              utils.verticalSpacer20,
-              _firstNameListTile(),
-              utils.verticalSpacer20,
-              _lastNameListTile(),
-              utils.verticalSpacer20,
-              _mobileListTile(),
-              utils.verticalSpacer20,
-              _birthDateListTile(),
-              utils.verticalSpacer20,
-              _userNameListTile(),
-              utils.verticalSpacer40,
-              utils.editInfoButton(controller.onPressedEditInfo),
-            ],
-          ),
+  Widget _body() => ListView(
+        padding: const EdgeInsets.all(
+          utils.scaffoldPadding,
         ),
+        children: [
+          _circleImage(),
+          utils.verticalSpacer20,
+          _firstNameListTile(),
+          utils.verticalSpacer20,
+          _lastNameListTile(),
+          utils.verticalSpacer20,
+          _mobileListTile(),
+          utils.verticalSpacer20,
+          _birthDateListTile(),
+          utils.verticalSpacer20,
+          _userNameListTile(),
+          utils.verticalSpacer40,
+          utils.editInfoButton(controller.onPressedEditInfo),
+        ],
       );
 
   Widget _circleImage() => CircleImage(

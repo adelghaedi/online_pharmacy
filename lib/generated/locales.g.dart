@@ -53,6 +53,11 @@ class LocaleKeys {
   static const drawer_exit = 'drawer_exit';
   static const pharmacies_page_not_available_pharmacies =
       'pharmacies_page_not_available_pharmacies';
+  static const pharmacies_page_advance_search =
+      'pharmacies_page_advance_search';
+  static const pharmacies_page_filter = 'pharmacies_page_filter';
+  static const pharmacies_page_from_date = 'pharmacies_page_from_date';
+  static const pharmacies_page_to_date = 'pharmacies_page_to_date';
   static const detail_pharmacy_page_pharmacy_profile =
       'detail_pharmacy_page_pharmacy_profile';
   static const detail_pharmacy_page_edit = 'detail_pharmacy_page_edit';
@@ -119,6 +124,19 @@ class LocaleKeys {
       'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_successful';
   static const add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_failed =
       'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_failed';
+  static const buy_drug_page_buy_drug = 'buy_drug_page_buy_drug';
+  static const buy_drug_page_add_to_cart = 'buy_drug_page_add_to_cart';
+  static const buy_drug_page_toman = 'buy_drug_page_toman';
+  static const detail_buy_drug_page_detail_buy_drug =
+      'detail_buy_drug_page_detail_buy_drug';
+  static const pharmacies_with_drug_selected_page_no_pharmacy_has_selected_drug =
+      'pharmacies_with_drug_selected_page_no_pharmacy_has_selected_drug';
+  static const pharmacies_with_drug_selected_page_pharmacies_with_selected_drugs =
+      'pharmacies_with_drug_selected_page_pharmacies_with_selected_drugs';
+  static const pharmacies_with_drug_selected_page_drug =
+      'pharmacies_with_drug_selected_page_drug';
+  static const shopping_cart_page_shopping_cart_empty =
+      'shopping_cart_page_shopping_cart_empty';
 }
 
 class Locales {
@@ -158,6 +176,10 @@ class Locales {
     'profile_page_profile': 'profile',
     'drawer_exit': 'Exit',
     'pharmacies_page_not_available_pharmacies': 'No pharmacy has been defined',
+    'pharmacies_page_advance_search': 'Advance Sreach',
+    'pharmacies_page_filter': 'Filter',
+    'pharmacies_page_from_date': 'From date',
+    'pharmacies_page_to_date': 'To date',
     'detail_pharmacy_page_pharmacy_profile': 'Pharmacy profile',
     'detail_pharmacy_page_edit': 'Edit ',
     'user_page_mobile': 'Phone number',
@@ -173,7 +195,7 @@ class Locales {
     'user_page_edit_info': 'Edit Information',
     'user_page_change_info': 'Information changed successfully',
     'user_page_change_info_failed': 'Change of information was not successful',
-    'pharmacy_page_pharmacy_name': 'name',
+    'pharmacy_page_pharmacy_name': 'Pharmacy name',
     'pharmacy_page_address': 'address',
     'pharmacy_page_doctor_name': 'The name of the doctor',
     'pharmacy_page_select_date_of_establishment':
@@ -215,6 +237,16 @@ class Locales {
         'The drug was successfully added to the pharmacy drugs',
     'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_failed':
         'Addition of drug to pharmacy drugs was not successful',
+    'buy_drug_page_buy_drug': 'Buy drug',
+    'buy_drug_page_add_to_cart': 'Add to cart',
+    'buy_drug_page_toman': 'Toman',
+    'detail_buy_drug_page_detail_buy_drug': 'Detail buy drug',
+    'pharmacies_with_drug_selected_page_no_pharmacy_has_selected_drug':
+        'No pharmacy has the selected drug',
+    'pharmacies_with_drug_selected_page_pharmacies_with_selected_drugs':
+        'Pharmacies with selected drugs',
+    'pharmacies_with_drug_selected_page_drug': 'drug',
+    'shopping_cart_page_shopping_cart_empty': 'Shopping cart is empty',
   };
   static const fa_IR = {
     'login_page_username': 'نام کاربری',
@@ -251,6 +283,10 @@ class Locales {
     'drawer_exit': 'خروج',
     'pharmacies_page_not_available_pharmacies':
         'هیچ داروخانه ای تعریف نشده است.',
+    'pharmacies_page_advance_search': 'جست و جوی پیشرفته',
+    'pharmacies_page_filter': 'فیلتر',
+    'pharmacies_page_from_date': 'از تاریخ',
+    'pharmacies_page_to_date': 'تا تاریخ',
     'detail_pharmacy_page_pharmacy_profile': 'مشخصات داروخانه',
     'detail_pharmacy_page_edit': 'ویرایش',
     'user_page_mobile': 'تلفن همراه',
@@ -266,7 +302,7 @@ class Locales {
     'user_page_edit_info': 'ویرایش اطلاعات',
     'user_page_change_info': 'اطلاعات با موفقیت تغییر کرد.',
     'user_page_change_info_failed': 'تغییر اطلاعات موفقیت آمیز نبود.',
-    'pharmacy_page_pharmacy_name': 'نام',
+    'pharmacy_page_pharmacy_name': 'نام داروخانه',
     'pharmacy_page_address': 'آدرس',
     'pharmacy_page_doctor_name': 'نام دکتر',
     'pharmacy_page_select_date_of_establishment': 'تاریخ تاسیس را انتخاب کنید.',
@@ -301,5 +337,15 @@ class Locales {
         'دارو با موفقیت به داروهای داروخانه اضافه شد.',
     'add_drug_to_pharmacy_dialog_add_drug_to_pharmacy_failed':
         'اضافه کردن دارو به داروهای داروخانه موفقیت آمیز نبود.',
+    'buy_drug_page_buy_drug': 'خرید دارو',
+    'buy_drug_page_add_to_cart': 'اضافه کردن به سبد خرید',
+    'buy_drug_page_toman': 'تومان',
+    'detail_buy_drug_page_detail_buy_drug': 'جزئیات خرید دارو',
+    'pharmacies_with_drug_selected_page_no_pharmacy_has_selected_drug':
+        'هیچ داروخانه ای داروی انتخابی را ندارد.',
+    'pharmacies_with_drug_selected_page_pharmacies_with_selected_drugs':
+        'داروخانه های دارای داروی انتخابی',
+    'pharmacies_with_drug_selected_page_drug': 'دارو',
+    'shopping_cart_page_shopping_cart_empty': 'سبد خرید خالی است.',
   };
 }

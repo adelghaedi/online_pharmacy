@@ -9,7 +9,8 @@
       "password": "123456#",
       "isAdmin": true,
       "base64Image": null,
-      "id": 1
+      "id": 1,
+      "drugs": []
     },
     {
       "firstName": "adel",
@@ -20,18 +21,115 @@
       "password": "123456#",
       "isAdmin": false,
       "base64Image": null,
-      "id": 2
+      "id": 2,
+      "drugs": [
+        {
+          "pharmacyDrug": {
+            "drug": {
+              "id": 2,
+              "name": "سرماخوردگی",
+              "manufacturingCompanyName": "شرکت داروسازان تهران",
+              "base64Image": null
+            },
+            "price": "5,000",
+            "showPharmacyDrug": true
+          },
+          "pharmacyId": 1,
+          "count": 7
+        }
+      ]
     }
   ],
   "Pharmacies": [
     {
       "name": "نرجس",
       "address": "",
-      "doctorName": "محمدی",
+      "doctorName": "علی رضا محمدی",
       "dateOfEstablishment": "1398/10/10",
       "base64Image": null,
-      "drugs": [],
+      "drugs": [
+        {
+          "drug": {
+            "id": 1,
+            "name": "استامینوفن",
+            "manufacturingCompanyName": "شرکت داروسازان شیراز",
+            "base64Image": null
+          },
+          "price": "2,000",
+          "showPharmacyDrug": true
+        },
+        {
+          "drug": {
+            "id": 2,
+            "name": "سرماخوردگی",
+            "manufacturingCompanyName": "شرکت داروسازان تهران",
+            "base64Image": null
+          },
+          "price": "5,000",
+          "showPharmacyDrug": true
+        }
+      ],
       "id": 1
+    },
+    {
+      "name": "رازی",
+      "address": "",
+      "doctorName": "احمد رحمانی",
+      "dateOfEstablishment": "1393/10/10",
+      "base64Image": null,
+      "drugs": [
+        {
+          "drug": {
+            "id": 1,
+            "name": "استامینوفن",
+            "manufacturingCompanyName": "شرکت داروسازان شیراز",
+            "base64Image": null
+          },
+          "price": "4,000",
+          "showPharmacyDrug": true
+        },
+        {
+          "drug": {
+            "id": 2,
+            "name": "سرماخوردگی",
+            "manufacturingCompanyName": "شرکت داروسازان تهران",
+            "base64Image": null
+          },
+          "price": "10,000",
+          "showPharmacyDrug": true
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "محمد رسول الله",
+      "address": "",
+      "doctorName": "علی رادان فر",
+      "dateOfEstablishment": "1389/10/09",
+      "base64Image": null,
+      "drugs": [
+        {
+          "drug": {
+            "id": 1,
+            "name": "استامینوفن",
+            "manufacturingCompanyName": "شرکت داروسازان شیراز",
+            "base64Image": null
+          },
+          "price": "4,000",
+          "showPharmacyDrug": true
+        },
+        {
+          "drug": {
+            "id": 2,
+            "name": "سرماخوردگی",
+            "manufacturingCompanyName": "شرکت داروسازان تهران",
+            "base64Image": null
+          },
+          "price": "10,000",
+          "showPharmacyDrug": true
+        }
+      ],
+      "id": 3
     }
   ],
   "Drugs": [

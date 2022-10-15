@@ -32,6 +32,7 @@ class AddUserController extends UserBaseController {
         password: passwordController.text,
         isAdmin: isAdmin,
         base64Image: selectedImageUrl.value,
+        drugs: [],
       );
 
       final Either<String, UserViewModel> result =

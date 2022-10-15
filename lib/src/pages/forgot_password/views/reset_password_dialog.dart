@@ -23,9 +23,13 @@ class ResetPasswordDialog extends GetView<ResetPasswordController> {
 
   Widget _alertDialog(BuildContext context, final bool comeFromLoginPage) =>
       AlertDialog(
-          title: Text(LocaleKeys.forgot_password_page_change_password.tr),
-          contentPadding: const EdgeInsets.all(utils.scaffoldPadding),
-          content: _form(context, comeFromLoginPage));
+        title: Text(LocaleKeys.forgot_password_page_change_password.tr),
+        contentPadding: const EdgeInsets.all(utils.scaffoldPadding),
+        content: _form(
+          context,
+          comeFromLoginPage,
+        ),
+      );
 
   Widget _form(
     BuildContext context,
@@ -54,7 +58,7 @@ class ResetPasswordDialog extends GetView<ResetPasswordController> {
     final bool comeFromLoginPage,
   ) =>
       SizedBox(
-        height: utils.elevatedButtonHeight,
+        height: utils.buttonHeight,
         child: Obx(
           () => ElevatedButton(
             onPressed: () =>

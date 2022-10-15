@@ -70,7 +70,7 @@ class AddDrugToPharmacyDialog extends GetView<AddDrugToPharmacyController> {
 
   Widget _submitButton(final BuildContext context) => Obx(
         () => SizedBox(
-          height: utils.elevatedButtonHeight,
+          height: utils.buttonHeight,
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () => controller.onPressedSubmit(context),

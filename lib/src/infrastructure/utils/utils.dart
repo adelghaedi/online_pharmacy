@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toast/toast.dart';
 
-
 import '../../../generated/locales.g.dart';
-
 
 const String packageName = 'pharmacy';
 const String drugImageUrl = 'lib/assets/images/drug.png';
@@ -34,7 +32,15 @@ const String endPointUrlApiDrugs = '/Drugs';
 
 const String endPointUrlApiDrugsPharmacy = '/DrugsPharmacy';
 
-const double elevatedButtonHeight = 45.0;
+const String nameLikeSearchQuery = 'name_like';
+
+const String doctorNameLikeSearchQuery = 'doctorName_like';
+
+const String dateOfEstablishmentGteSearchQuery = 'dateOfEstablishment_gte';
+
+const String dateOfEstablishmentLteSearchQuery = 'dateOfEstablishment_lte';
+
+const double buttonHeight = 45.0;
 
 const SizedBox verticalSpacer5 = SizedBox(
   height: 5,
@@ -114,7 +120,7 @@ Widget titleListTile(final String title) => Text(
     );
 
 Widget editInfoButton(final VoidCallback onPressed) => SizedBox(
-      height: elevatedButtonHeight,
+      height: buttonHeight,
       child: ElevatedButton(
         onPressed: onPressed,
         child: Text(
@@ -128,3 +134,34 @@ String convertImageToBase64(final String imageUrl) {
   String base64Image = base64.encode(imageBytes);
   return base64Image;
 }
+
+Widget noDefinedText(final String text) => Center(
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontSize: 20,
+        ),
+      ),
+    );
+
+Widget titleContainer(final String title) => Text(
+      title,
+      style: const TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 22,
+      ),
+    );
+
+Widget subTitleContainer(final String subTitle) => Text(
+      subTitle,
+      style: const TextStyle(fontSize: 18),
+    );
+
+Widget calendarIcon() => const Icon(
+      Icons.calendar_today,
+    );
+
+Widget addIcon({final Color? color}) => Icon(
+      Icons.add,
+      color: color,
+    );

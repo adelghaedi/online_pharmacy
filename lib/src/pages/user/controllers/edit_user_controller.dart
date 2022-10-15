@@ -8,6 +8,7 @@ import '../../shared/models/user_view_model.dart';
 import '../models/edit_user_dto.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../../../generated/locales.g.dart';
+import '../../shared/models/user_drug_view_model.dart';
 
 class EditUserController extends UserBaseController {
   @override
@@ -47,6 +48,11 @@ class EditUserController extends UserBaseController {
         userName: userNameController.text,
         isAdmin: isAdmin,
         base64Image: selectedImageUrl.value,
+        drugs: (Get.arguments['drugs'] as List<dynamic>)
+            .map(
+              (json) => UserDrugViewModel.fromJson(json),
+            )
+            .toList(),
       );
 
       final Either<String, UserViewModel> result =

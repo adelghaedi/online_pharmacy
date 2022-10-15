@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../../../infrastructure/routes/pharmacy_module_routes.dart';
+
 abstract class HomeBaseController extends GetxController {
   abstract bool isHomeUser;
 
@@ -9,5 +11,7 @@ abstract class HomeBaseController extends GetxController {
 
   void onTapPharmaciesItem();
 
-  void onTapShoppingCartItem() {}
+  void onTapShoppingCartItem() {
+    Get.toNamed(PharmacyModuleRoutes.shoppingCartPage);
+  }
 }

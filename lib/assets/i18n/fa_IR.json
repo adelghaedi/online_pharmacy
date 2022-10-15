@@ -43,7 +43,11 @@
     "exit": "خروج"
   },
   "pharmacies_page": {
-    "not_available_pharmacies": "هیچ داروخانه ای تعریف نشده است."
+    "not_available_pharmacies": "هیچ داروخانه ای تعریف نشده است.",
+    "advance_search": "جست و جوی پیشرفته",
+    "filter": "فیلتر",
+    "from_date": "از تاریخ",
+    "to_date": "تا تاریخ"
   },
   "detail_pharmacy_page": {
     "pharmacy_profile": "مشخصات داروخانه",
@@ -65,7 +69,7 @@
     "change_info_failed": "تغییر اطلاعات موفقیت آمیز نبود."
   },
   "pharmacy_page": {
-    "pharmacy_name": "نام",
+    "pharmacy_name": "نام داروخانه",
     "address": "آدرس",
     "doctor_name": "نام دکتر",
     "select_date_of_establishment": "تاریخ تاسیس را انتخاب کنید.",
@@ -103,5 +107,21 @@
     "price_validate": "قیمت باید بزرگتر یا مساوی 1000 باشد.",
     "add_drug_to_pharmacy_successful": "دارو با موفقیت به داروهای داروخانه اضافه شد.",
     "add_drug_to_pharmacy_failed": "اضافه کردن دارو به داروهای داروخانه موفقیت آمیز نبود."
+  },
+  "buy_drug_page": {
+    "buy_drug": "خرید دارو",
+    "add_to_cart": "اضافه کردن به سبد خرید",
+    "toman": "تومان"
+  },
+  "detail_buy_drug_page": {
+    "detail_buy_drug": "جزئیات خرید دارو"
+  },
+  "pharmacies_with_drug_selected_page": {
+    "no_pharmacy_has_selected_drug": "هیچ داروخانه ای داروی انتخابی را ندارد.",
+    "pharmacies_with_selected_drugs": "داروخانه های دارای داروی انتخابی",
+    "drug": "دارو"
+  },
+  "shopping_cart_page": {
+    "shopping_cart_empty": "سبد خرید خالی است."
   }
 }

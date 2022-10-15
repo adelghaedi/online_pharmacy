@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/pharmacy_drug_management_controller.dart';
-import '../../../components/customScaffold/views/custom_scaffold.dart';
+import '../../../components/custom_scaffold/views/custom_scaffold.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../shared/circle_image.dart';
 import '../../../../generated/locales.g.dart';
@@ -24,9 +24,9 @@ class PharmacyDrugManagementPage
   Widget _scaffold() => CustomScaffold(
         body: _body(),
         wantDrawer: true,
-        wantFloatActionButton: true,
+        wantFloatingActionButton: true,
         titleAppBar: LocaleKeys.drugs_management_drugs_management.tr,
-        onPressedFloatActionButton: controller.onPressedFloatActionButton,
+        onPressedFloatingActionButton: controller.onPressedFloatActionButton,
       );
 
   Widget _body() {
@@ -35,18 +35,10 @@ class PharmacyDrugManagementPage
     } else if (controller.pharmacyDrugList.isNotEmpty) {
       return _drugListView();
     } else {
-      return _noDefinedDrugForPharmacy();
+      return utils.noDefinedText(
+          LocaleKeys.drugs_management_no_defined_drug_for_pharmacy.tr);
     }
   }
-
-  Widget _noDefinedDrugForPharmacy() => Center(
-        child: Text(
-          LocaleKeys.drugs_management_no_defined_drug_for_pharmacy.tr,
-          style: const TextStyle(
-            fontSize: 20,
-          ),
-        ),
-      );
 
   Widget _drugListView() => ListView.builder(
         itemCount: controller.pharmacyDrugList.length,
@@ -65,15 +57,13 @@ class PharmacyDrugManagementPage
           children: [
             _circleImage(controller.pharmacyDrugList[index].drug.base64Image),
             utils.horizontalSpacer10,
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _drugName(controller.pharmacyDrugList[index].drug.name),
-                  utils.verticalSpacer5,
-                  _drugPrice(controller.pharmacyDrugList[index].price),
-                ],
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _drugName(controller.pharmacyDrugList[index].drug.name),
+                utils.verticalSpacer5,
+                _drugPrice(controller.pharmacyDrugList[index].price),
+              ],
             ),
             utils.horizontalSpacer10,
             _showDrugSwitchRow(index),
@@ -81,27 +71,31 @@ class PharmacyDrugManagementPage
         ),
       );
 
-  Widget _showDrugSwitchRow(final int index) =>
-      Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text(
-          LocaleKeys.drugs_management_show_drug.tr,
-          style: const TextStyle(
-            fontSize: 16,
-          ),
-        ),
-        Obx(
-          () => Switch(
-            value: controller.showDrugSwitchesValue[index],
-            onChanged: (final bool value) => controller.onChangedShowDrugSwitch(
-              value,
-              index,
+  Widget _showDrugSwitchRow(final int index) => Expanded(
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Expanded(
+            child: Text(
+              LocaleKeys.drugs_management_show_drug.tr,
+              style: const TextStyle(
+                fontSize: 16,
+              ),
             ),
           ),
-        ),
-      ]);
+          Obx(
+            () => Switch(
+              value: controller.showDrugSwitchesValue[index],
+              onChanged: (final bool value) =>
+                  controller.onChangedShowDrugSwitch(
+                value,
+                index,
+              ),
+            ),
+          ),
+        ]),
+      );
 
   Widget _drugPrice(final String price) => Text(
-        '$price تومان',
+        '$price ${LocaleKeys.buy_drug_page_toman.tr}',
         style: const TextStyle(
           fontSize: 18,
         ),

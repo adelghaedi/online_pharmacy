@@ -90,6 +90,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   Future<void> _userLoggedInException(final exception) async {
+
     await Get.offAndToNamed(PharmacyModuleRoutes.loginPage);
   }
 

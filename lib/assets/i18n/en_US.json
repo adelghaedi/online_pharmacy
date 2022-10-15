@@ -43,7 +43,11 @@
     "exit": "Exit"
   },
   "pharmacies_page": {
-    "not_available_pharmacies": "No pharmacy has been defined"
+    "not_available_pharmacies": "No pharmacy has been defined",
+    "advance_search": "Advance Sreach",
+    "filter": "Filter",
+    "from_date": "From date",
+    "to_date": "To date"
   },
   "detail_pharmacy_page": {
     "pharmacy_profile": "Pharmacy profile",
@@ -65,7 +69,7 @@
     "change_info_failed": "Change of information was not successful"
   },
   "pharmacy_page": {
-    "pharmacy_name": "name",
+    "pharmacy_name": "Pharmacy name",
     "address": "address",
     "doctor_name": "The name of the doctor",
     "select_date_of_establishment": "Select the date of establishment",
@@ -103,5 +107,21 @@
     "price_validate": "The price must be greater than or equal to 1000",
     "add_drug_to_pharmacy_successful": "The drug was successfully added to the pharmacy drugs",
     "add_drug_to_pharmacy_failed": "Addition of drug to pharmacy drugs was not successful"
+  },
+  "buy_drug_page": {
+    "buy_drug": "Buy drug",
+    "add_to_cart": "Add to cart",
+    "toman": "Toman"
+  },
+  "detail_buy_drug_page": {
+    "detail_buy_drug": "Detail buy drug"
+  },
+  "pharmacies_with_drug_selected_page": {
+    "no_pharmacy_has_selected_drug": "No pharmacy has the selected drug",
+    "pharmacies_with_selected_drugs": "Pharmacies with selected drugs",
+    "drug": "drug"
+  },
+  "shopping_cart_page": {
+    "shopping_cart_empty": "Shopping cart is empty"
   }
 }

@@ -6,7 +6,7 @@ import '../../../../generated/locales.g.dart';
 import '../controllers/user_base_controller.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
 import '../../shared/circle_image.dart';
-import '../../../components/customScaffold/views/custom_scaffold.dart';
+import '../../../components/custom_scaffold/views/custom_scaffold.dart';
 
 class UserPage<T extends UserBaseController> extends GetView<T> {
   const UserPage({super.key});
@@ -25,7 +25,7 @@ class UserPage<T extends UserBaseController> extends GetView<T> {
                   ? LocaleKeys.login_page_sign_up.tr
                   : LocaleKeys.user_page_edit_info.tr,
               wantDrawer: false,
-              wantFloatActionButton: false,
+              wantFloatingActionButton: false,
               body: _form(context),
             ),
           ),
@@ -106,7 +106,7 @@ class UserPage<T extends UserBaseController> extends GetView<T> {
       );
 
   Widget _button(final BuildContext context) => SizedBox(
-        height: utils.elevatedButtonHeight,
+        height: utils.buttonHeight,
         width: double.infinity,
         child: ElevatedButton(
             style: ButtonStyle(
@@ -128,15 +128,11 @@ class UserPage<T extends UserBaseController> extends GetView<T> {
       decoration: InputDecoration(
         labelText: LocaleKeys.user_page_birth_date.tr,
         hintText: utils.birthDateHint,
-        suffixIcon: _calendarIcon(),
+        suffixIcon: utils.calendarIcon(),
       ),
       onTap: () async {
         await controller.onTapBirthDateTextField(context);
       });
-
-  Widget _calendarIcon() => const Icon(
-        Icons.calendar_today,
-      );
 
   Widget _confirmPasswordTextField() => Obx(
         () => TextFormField(

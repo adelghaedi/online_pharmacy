@@ -53,7 +53,9 @@ class ResetPasswordController extends GetxController {
   }
 
   void _changePasswordSuccessful(
-      final UserViewModel user, final bool comeFromLoginPage) {
+    final UserViewModel user,
+    final bool comeFromLoginPage,
+  ) {
     isLoading.value = false;
     utils.customToast(
         msg: LocaleKeys.reset_password_dialog_change_password_successfully.tr);

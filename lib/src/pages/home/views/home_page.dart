@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../components/customScaffold/views/custom_scaffold.dart';
-import '../../../components/customScaffold/controllers/custom_scaffold_controller.dart';
+import '../../../components/custom_scaffold/views/custom_scaffold.dart';
 import '../../../../generated/locales.g.dart';
 import '../controllers/home_base_controller.dart';
 import '../../../infrastructure/utils/utils.dart' as utils;
@@ -12,16 +11,15 @@ class HomePage<T extends HomeBaseController> extends GetView<T> {
 
   @override
   Widget build(final BuildContext context) {
-    Get.lazyPut(CustomScaffoldController.new);
     return _scaffold();
   }
 
   Widget _scaffold() => CustomScaffold(
         body: _body(),
         wantDrawer: true,
-        wantFloatActionButton: false,
+        wantFloatingActionButton: false,
         titleAppBar: LocaleKeys.home_page_pharmacy.tr,
-        isHomeUserPage: controller.isHomeUser,
+        isHomePage: true,
       );
 
   Widget _body() => GridView.count(
@@ -43,7 +41,10 @@ class HomePage<T extends HomeBaseController> extends GetView<T> {
             controller.onTapProfileItem,
           ),
           if (controller.isHomeUser)
-            _itemGridView(LocaleKeys.home_page_shopping_cart.tr, controller.onTapShoppingCartItem),
+            _itemGridView(
+              LocaleKeys.home_page_shopping_cart.tr,
+              controller.onTapShoppingCartItem,
+            ),
         ],
       );
 
