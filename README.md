@@ -11,29 +11,42 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Screenshots
+<img width="199" alt="login-page-en" src="https://github.com/adelghaedi/online_pharmacy/assets/68464029/01da81da-61dc-4a24-b9f3-1abdb11bf5a0">
+<img width="198" alt="login-page" src="https://github.com/adelghaedi/online_pharmacy/assets/68464029/0c1d4192-8921-4210-9bc8-7fbf93adcf05">
+<img width="199" alt="search" src="https://github.com/adelghaedi/online_pharmacy/assets/68464029/2c03d81a-0256-4ea7-9e1d-6980aaa896e3">
+
+<br/>
+<img width="204" alt="add-pharmacy" src="https://github.com/adelghaedi/online_pharmacy/assets/68464029/c0bc6a95-64a8-424c-a863-6db7501122ee">
+<img width="197" alt="drugs" src="https://github.com/adelghaedi/online_pharmacy/assets/68464029/e403ac9d-268b-47e2-b3ee-733c20ecd605">
+<img width="198" alt="cart" src="https://github.com/adelghaedi/online_pharmacy/assets/68464029/3ff5b791-8af8-43a9-bc87-058287d04751">
+<br/>
+
+
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+-*English and farsi language* <br /> 
+-*Simple and advanced search Pharmacy and Drugs* <br />
+
+
+**-Admin** <br />
+
+1- *Add pharmacies and drugs* <br/>
+2- *Adding drugs to the inventory of pharmacies* <br/>
+3- *Same drugs with different manufacturers and prices* <br/>
+4- *The ability to display drugs for the pharmacy* <br/>
+
+**-User** <br />
+
+1- *Choosing pharmacies and seeing available drugs* <br/>
+2- *See the drugs and pharmacies that have it* <br/>
+3- *Add drugs to cart* <br/>
+
+
+
+
 
 ## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+*install npm and json-server (nodejs) for backend project* <br />
+*run json-server and use app*
